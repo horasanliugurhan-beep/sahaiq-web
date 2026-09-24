@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi · Uğurhan Horasanlı</title>
+<meta name="description" content="Saha satışında 'bugün önce kimi aramalıyım?' sorusuna her sabah hazır cevap veren SahaIQ'nun nasıl kurulduğu: RFM analizi, müşteri kaybı tahmini, Claude API ve n8n.">
+<meta name="author" content="Uğurhan Horasanlı">
+<link rel="canonical" href="https://sahaiq.app/sahaiq-nasil-kurdum.html">
+<style>
+:root{--bg:#fafaf8;--fg:#1c1c1a;--mut:#5f5f5a;--line:#e4e4df;--acc:#1f6f5c}
+@media (prefers-color-scheme:dark){:root{--bg:#131412;--fg:#ececea;--mut:#a3a39d;--line:#2c2d2a;--acc:#5fc4a8}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:700px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav a{color:var(--mut);text-decoration:none;font-size:15px}nav b a{color:var(--fg);font-size:20px;font-weight:700}nav b span{color:var(--acc)}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.2;letter-spacing:-.6px;margin:36px 0 10px}
+.meta{color:var(--mut);font-size:15px;margin:0 0 30px}.meta a{color:var(--mut)}
+h2{font-size:23px;margin:38px 0 10px}a{color:var(--acc)}li{margin:8px 0}
+footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}footer a{color:var(--mut)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi","datePublished":"2026-09-24","inLanguage":"tr","url":"https://sahaiq.app/sahaiq-nasil-kurdum.html","author":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"},"publisher":{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/"}}
+</script>
+</head>
+<body>
+<div class="w">
+<nav><b><a href="index.html">Saha<span>IQ</span></a></b><a href="index.html">← Ana sayfa</a></nav>
+
+<article>
+<h1>SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi</h1>
+<p class="meta">Yazar: <a href="hakkinda.html">Uğurhan Horasanlı</a> · 24 Eylül 2026</p>
+
+<p>Saha satışında günün en pahalı sorusu sabah sorulur: <strong>"Bugün önce kimi aramalıyım?"</strong></p>
+
+<p>Elinizde yüzü aşkın müşteri varsa bu sorunun cevabı genelde hafızaya, alışkanlığa ya da o sabah telefonu ilk kimin açtığına kalıyor. Sessizce sipariş vermeyi bırakan müşteriyi fark ettiğinizde ise çoğu zaman iş işten geçmiş oluyor. SahaIQ'yu bu soruya her sabah hazır bir cevap bulmak için kurdum.</p>
+
+<h2>Nasıl çalışıyor?</h2>
+<p>Sistem dört adımlı basit bir zincir:</p>
+<ol>
+<li><strong>Veri:</strong> Müşteri bazında sipariş geçmişi; ne zaman, ne sıklıkla ve ne tutarda sipariş verildiği.</li>
+<li><strong>Analiz (Python):</strong> Her müşteri için bir öncelik puanı hesaplanıyor. Bu puan üç şeyden besleniyor:
+<ul>
+<li><strong>RFM analizi:</strong> Müşteri en son ne zaman sipariş verdi, ne sıklıkla veriyor, ne kadar ciro yapıyor?</li>
+<li><strong>Kayıp tahmini:</strong> Bir makine öğrenmesi modeli (Gradient Boosting), sipariş ritmi bozulan müşterileri işaretliyor. Normalde iki haftada bir sipariş veren biri dört haftadır sessizse sistem bunu görüyor.</li>
+<li><strong>Pareto:</strong> Cironun büyük kısmını taşıyan müşteriler ayrıca öne çıkarılıyor.</li>
+</ul></li>
+<li><strong>Özet (Claude API):</strong> Puanlar ve sayılar tek başına sabah 7'de kimsenin okumak isteyeceği şeyler değil. Yapay zekâ bu tabloyu üç-beş cümlelik, sade bir brifinge çeviriyor: "Şu üç müşteri bu hafta öncelikli, çünkü…"</li>
+<li><strong>Teslim (n8n + Telegram):</strong> Bütün akış n8n üzerinde her sabah otomatik çalışıyor, brifing telefona mesaj olarak düşüyor.</li>
+</ol>
+
+<h2>Yolda öğrendiklerim</h2>
+<ul>
+<li><strong>İşin büyük kısmı veri temizliği.</strong> Model kurmak birkaç gün sürdü; verinin tutarlı hale gelmesi (aynı müşterinin farklı yazılışları, eksik tarihler, iadeler) çok daha uzun.</li>
+<li><strong>Brifing kısa olmalı.</strong> İlk sürümler fazla detaylıydı ve okunmadı. Mesajı üç öneriye indirince kullanılmaya başladı.</li>
+<li><strong>Model karar vermiyor, hatırlatıyor.</strong> Sahadaki insanın bildiği şeyi model bilmiyor. Sistemin işi, gözden kaçanı sabah önüne koymak.</li>
+</ul>
+
+<h2>Sırada ne var?</h2>
+<p>Şu an ikinci aşama üzerinde çalışıyorum: kampanya verilerini brifinge eklemek ve müşteri bazında hangi kampanyanın işe yarayacağını önermek. SahaIQ hâlâ erken sürüm; denemek isteyen saha ekipleri için <a href="index.html">erken erişim</a> açık.</p>
+</article>
+
+<footer>© SahaIQ · <a href="hakkinda.html">Uğurhan Horasanlı</a> · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>
+</div>
+</body>
+</html>
