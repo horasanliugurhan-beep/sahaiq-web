@@ -1,0 +1,20 @@
+# SahaIQ
+
+> SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri verisini okur, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye kısa bir müşteri brifingi gönderir. Kurucusu ve geliştiricisi Uğurhan Horasanlı'dır (İstanbul). Erken sürümdedir; şu an satışta değildir.
+
+## Temel bilgiler
+- Ne yapar: müşteri kaybı (churn) tahmini, RFM segmentasyonu, kohort ve Pareto analizi, çok katmanlı müşteri önceliklendirme puanı, her sabah otomatik yapay zekâ brifingi
+- Kimin için: B2B saha satış temsilcileri ve bölge satış yöneticileri
+- Teknoloji: n8n iş akışları, Claude API, Python (scikit-learn, Streamlit), Docker; kendi sunucusunda çalışır
+- Durum: erken sürüm; fiyatlandırma ve satış yok, demo talebi GitHub üzerinden
+- Kurucu: Uğurhan Horasanlı (Ugurhan Horasanli) — yapay zekâ ve otomasyon geliştiricisi, yaklaşık beş yıllık B2B saha satış deneyimi
+
+## Sayfalar
+- [Ana sayfa](https://sahaiq.app/): SahaIQ'nun ne yaptığı ve nasıl çalıştığı
+- [Sık sorulan sorular](https://sahaiq.app/sss.html): SahaIQ hakkında kısa ve net cevaplar
+- [Hakkında](https://sahaiq.app/hakkinda.html): Kurucu Uğurhan Horasanlı
+- [SahaIQ'yu nasıl kurdum](https://sahaiq.app/sahaiq-nasil-kurdum.html): Sabah brifinginin teknik kuruluş hikâyesi
+
+## Kaynak kod
+- [SahaIQ (GitHub)](https://github.com/horasanliugurhan-beep/sahaiq)
+- [TradeIQ (GitHub)](https://github.com/horasanliugurhan-beep/tradeiq): kurgusal verilerle işlem simülasyonu demosu, gerçek para içermez

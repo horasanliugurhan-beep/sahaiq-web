@@ -11,7 +11,7 @@
 @media (prefers-color-scheme:dark){:root{--bg:#131412;--fg:#ececea;--mut:#a3a39d;--card:#1b1c1a;--line:#2c2d2a;--acc:#5fc4a8}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .w{max-width:880px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav{display:flex;flex-wrap:wrap;gap:8px 0;justify-content:space-between;align-items:center;padding:22px 0}nav div{display:flex;flex-wrap:wrap;gap:4px 16px}nav div a{margin-left:0!important}
 nav b{font-size:20px;letter-spacing:-.3px}nav b span{color:var(--acc)}
 nav a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:15px}nav a:hover{color:var(--fg)}
 header{padding:56px 0 40px}h1{font-size:clamp(30px,5vw,46px);line-height:1.15;letter-spacing:-.8px;margin:0 0 18px}
@@ -29,12 +29,12 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 .pj-lk{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:15px}.pj-lk a{color:var(--acc);font-weight:600;text-decoration:none;padding:4px 0}.pj-lk a:hover{text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için yapay zekâ destekli satış analitiği ve CRM.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"]},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için yapay zekâ destekli satış analitiği ve CRM.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}]}
 </script>
 </head>
 <body>
 <div class="w">
-<nav><b>Saha<span>IQ</span></b><div><a href="#ozellikler">Özellikler</a><a href="#projeler">Projeler</a><a href="#yazilar">Yazılar</a><a href="hakkinda.html">Hakkında</a></div></nav>
+<nav><b>Saha<span>IQ</span></b><div><a href="#ozellikler">Özellikler</a><a href="#projeler">Projeler</a><a href="#yazilar">Yazılar</a><a href="sss.html">SSS</a><a href="hakkinda.html">Hakkında</a></div></nav>
 
 <header>
 <span class="tag">Erken sürüm</span>
@@ -42,6 +42,11 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <p class="lead">SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracı. Müşteri verisini okur, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye kısa, uygulanabilir bir brifing gönderir.</p>
 <a class="btn" href="https://github.com/horasanliugurhan-beep/sahaiq">Erken erişim / demo için iletişime geçin</a>
 </header>
+
+<section id="kisa-cevap">
+<h2>Kısa cevap: SahaIQ nedir?</h2>
+<p>SahaIQ, B2B saha satış ekipleri için geliştirilmiş, yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri kaybı riskini makine öğrenmesiyle tahmin eder, müşterileri RFM ile segmentlere ayırır ve her sabah temsilciye "bugün önce kimi aramalıyım?" sorusunun cevabını içeren kısa bir brifing gönderir. Erken sürümdedir, şu an satışta değildir. Kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır. Daha fazlası: <a href="sss.html">Sık sorulan sorular</a>.</p>
+</section>
 
 <section id="ozellikler">
 <h2>Neler yapıyor?</h2>
@@ -78,7 +83,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 </div>
 </section>
 
-<footer>SahaIQ · Kurucu ve geliştirici: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli) · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>
+<footer>SahaIQ · <a href="sss.html">SSS</a> · Kurucu ve geliştirici: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli) · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>
 </div>
 </body>
 </html>
