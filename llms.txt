@@ -1,11 +1,12 @@
 # SahaIQ
 
-> SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri verisini okur, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye kısa bir müşteri brifingi gönderir. Kurucusu ve geliştiricisi Uğurhan Horasanlı'dır (İstanbul). Erken sürümdedir; şu an satışta değildir.
+> SahaIQ, saha satış ekipleri için bir satış analitiği aracıdır. Satış verisini okur, sessizleşen ve alımı düşen müşterileri işaretler ve gerekçeli bir "bugün kimi aramalı" listesi çıkarır. Kurucusu ve geliştiricisi Uğurhan Horasanlı'dır (İstanbul). Erken sürümdedir; şu an satışta değildir.
 
 ## Temel bilgiler
-- Ne yapar: müşteri kaybı (churn) tahmini, RFM segmentasyonu, kohort ve Pareto analizi, çok katmanlı müşteri önceliklendirme puanı, her sabah otomatik yapay zekâ brifingi
+- Ne yapar: RFM segmentasyonu, 90/90 gün düşüş sinyali, Pareto analizi, kural tabanlı ve gerekçeli arama listesi, CSV içe aktarma (Türkçe biçimler)
+- Yol haritası (henüz yayında değil): zamanlanmış sabah brifingi, makine öğrenmesiyle müşteri kaybı tahmini
 - Kimin için: B2B saha satış temsilcileri ve bölge satış yöneticileri
-- Teknoloji: n8n iş akışları, Claude API, Python (scikit-learn, Streamlit), Docker; kendi sunucusunda çalışır
+- Teknoloji: JavaScript, Next.js; demo tamamen tarayıcıda çalışır, veri sunucuya gönderilmez
 - Durum: erken sürüm; fiyatlandırma ve satış yok, canlı demo (kurgusal veri, tarayıcıda çalışır): https://horasanliugurhan-beep.github.io/sahaiq/
 - Kurucu: Uğurhan Horasanlı (Ugurhan Horasanli) — yapay zekâ ve otomasyon geliştiricisi, yaklaşık beş yıllık B2B saha satış deneyimi
 
@@ -13,7 +14,7 @@
 - [Ana sayfa](https://sahaiq.app/): SahaIQ'nun ne yaptığı ve nasıl çalıştığı
 - [Sık sorulan sorular](https://sahaiq.app/sss.html): SahaIQ hakkında kısa ve net cevaplar
 - [Hakkında](https://sahaiq.app/hakkinda.html): Kurucu Uğurhan Horasanlı
-- [SahaIQ'yu nasıl kurdum](https://sahaiq.app/sahaiq-nasil-kurdum.html): Sabah brifinginin teknik kuruluş hikâyesi
+- [SahaIQ'yu nasıl kurdum](https://sahaiq.app/sahaiq-nasil-kurdum.html): İlk sürümün (n8n + Claude API sabah brifingi) kuruluş hikâyesi ve dersleri
 
 ## Kaynak kod
 - [SahaIQ (GitHub)](https://github.com/horasanliugurhan-beep/sahaiq)

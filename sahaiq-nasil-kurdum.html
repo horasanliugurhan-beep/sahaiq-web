@@ -31,12 +31,14 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 <h1>SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi</h1>
 <p class="meta">Yazar: <a href="hakkinda.html">Uğurhan Horasanlı</a> · 24 Eylül 2026</p>
 
+<p class="meta"><strong>Güncelleme (7 Ekim 2026):</strong> Bu yazı SahaIQ'nun ilk sürümünü anlatır. O sürümdeki n8n akışı kapatıldı; brifingin rakam ve önerileri yeterince güvenilir değildi. Güncel sürümde kimin aranacağına ve rakamlara açıklanabilir kurallar karar veriyor. <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu deneyin</a>.</p>
+
 <p>Saha satışında günün en pahalı sorusu sabah sorulur: <strong>"Bugün önce kimi aramalıyım?"</strong></p>
 
 <p>Elinizde yüzü aşkın müşteri varsa bu sorunun cevabı genelde hafızaya, alışkanlığa ya da o sabah telefonu ilk kimin açtığına kalıyor. Sessizce sipariş vermeyi bırakan müşteriyi fark ettiğinizde ise çoğu zaman iş işten geçmiş oluyor. SahaIQ'yu bu soruya her sabah hazır bir cevap bulmak için kurdum.</p>
 
-<h2>Nasıl çalışıyor?</h2>
-<p>Sistem dört adımlı basit bir zincir:</p>
+<h2>İlk sürüm nasıl çalışıyordu?</h2>
+<p>Sistem dört adımlı basit bir zincirdi:</p>
 <ol>
 <li><strong>Veri:</strong> Müşteri bazında sipariş geçmişi; ne zaman, ne sıklıkla ve ne tutarda sipariş verildiği.</li>
 <li><strong>Analiz (Python):</strong> Her müşteri için bir öncelik puanı hesaplanıyor. Bu puan üç şeyden besleniyor:
@@ -46,18 +48,19 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 <li><strong>Pareto:</strong> Cironun büyük kısmını taşıyan müşteriler ayrıca öne çıkarılıyor.</li>
 </ul></li>
 <li><strong>Özet (Claude API):</strong> Puanlar ve sayılar tek başına sabah 7'de kimsenin okumak isteyeceği şeyler değil. Yapay zekâ bu tabloyu üç-beş cümlelik, sade bir brifinge çeviriyor: "Şu üç müşteri bu hafta öncelikli, çünkü…"</li>
-<li><strong>Teslim (n8n + Telegram):</strong> Bütün akış n8n üzerinde her sabah otomatik çalışıyor, brifing telefona mesaj olarak düşüyor.</li>
+<li><strong>Teslim (n8n + Telegram):</strong> Bütün akış n8n üzerinde her sabah otomatik çalışıyor, brifing telefona mesaj olarak düşüyordu.</li>
 </ol>
 
 <h2>Yolda öğrendiklerim</h2>
 <ul>
 <li><strong>İşin büyük kısmı veri temizliği.</strong> Model kurmak birkaç gün sürdü; verinin tutarlı hale gelmesi (aynı müşterinin farklı yazılışları, eksik tarihler, iadeler) çok daha uzun.</li>
 <li><strong>Brifing kısa olmalı.</strong> İlk sürümler fazla detaylıydı ve okunmadı. Mesajı üç öneriye indirince kullanılmaya başladı.</li>
+<li><strong>Rakamı ve kararı yapay zekâya bırakmamak gerek.</strong> Metni güzel yazıyordu ama rakamları ve teklifleri zaman zaman kendisi üretiyordu. Güncel sürümde hesap ve karar kodda; yapay zekâ en fazla metni toparlayacak.</li>
 <li><strong>Model karar vermiyor, hatırlatıyor.</strong> Sahadaki insanın bildiği şeyi model bilmiyor. Sistemin işi, gözden kaçanı sabah önüne koymak.</li>
 </ul>
 
 <h2>Sırada ne var?</h2>
-<p>Şu an ikinci aşama üzerinde çalışıyorum: kampanya verilerini brifinge eklemek ve müşteri bazında hangi kampanyanın işe yarayacağını önermek. SahaIQ hâlâ erken sürüm; denemek isteyen saha ekipleri için <a href="index.html">erken erişim</a> açık.</p>
+<p>Güncel sürüm açıklanabilir kurallarla çalışıyor ve <a href="https://horasanliugurhan-beep.github.io/sahaiq/">canlı demo</a> olarak herkese açık. Sabah brifingi ve kayıp tahmini, rakamları doğrulanabilir hale gelince geri dönecek. SahaIQ hâlâ erken sürüm.</p>
 </article>
 
 <footer>© SahaIQ · <a href="hakkinda.html">Uğurhan Horasanlı</a> · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>

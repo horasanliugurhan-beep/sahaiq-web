@@ -19,13 +19,13 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","url":"https://sahaiq.app/sss.html","inLanguage":"tr","mainEntity":[
-{"@type":"Question","name":"SahaIQ nedir?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri verisini analiz eder, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye o gün öncelik vermesi gereken müşterileri özetleyen bir brifing gönderir."}},
+{"@type":"Question","name":"SahaIQ nedir?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ, saha satış ekipleri için bir satış analitiği aracıdır. Satış verisini analiz eder, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle o gün öncelik verilmesi gereken müşterilerin listesini çıkarır."}},
 {"@type":"Question","name":"SahaIQ kimin için?","acceptedAnswer":{"@type":"Answer","text":"B2B alanda çalışan saha satış temsilcileri ve bölge satış yöneticileri için tasarlandı. Çok sayıda bayi veya kurumsal müşteriyi takip eden, her gün kime öncelik vereceğine karar vermesi gereken ekiplere uygundur."}},
-{"@type":"Question","name":"SahaIQ nasıl çalışır?","acceptedAnswer":{"@type":"Answer","text":"Satış verisi düzenli olarak okunur; makine öğrenmesi modeli müşteri kaybı riskini hesaplar, RFM ve kohort analizleri müşterileri segmentlere ayırır, çok katmanlı bir puanlama motoru her müşteri için öncelik puanı üretir. Zamanlanmış bir n8n iş akışı her sabah bu sonuçları Claude API ile doğal dilde özetleyip mesaj olarak gönderir."}},
+{"@type":"Question","name":"SahaIQ nasıl çalışır?","acceptedAnswer":{"@type":"Answer","text":"Satış satırları müşteri bazında toplanır: son alım, alım yapılan gün sayısı, ciro ve son 90 günün önceki 90 güne göre değişimi. RFM puanlaması müşterileri segmentlere ayırır, kural tabanlı öneri motoru her müşteri için gerekçeli bir sonraki adım önerir. Zamanlanmış sabah brifingi ve makine öğrenmesiyle kayıp tahmini ilk sürümde denendi; şu an yol haritasındadır."}},
 {"@type":"Question","name":"SahaIQ ücretli mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır, şu an satışta değil. SahaIQ erken sürümdedir; fiyatlandırma yoktur. Kurgusal veriyle çalışan canlı demo herkese açıktır: https://horasanliugurhan-beep.github.io/sahaiq/ Erken erişim için GitHub üzerinden iletişime geçilebilir."}},
 {"@type":"Question","name":"SahaIQ hangi verilerle çalışır?","acceptedAnswer":{"@type":"Answer","text":"Müşteri, tarih, miktar, ciro ve ürün içeren satış verisiyle çalışır. Veri kaynağından bağımsız tasarlanmıştır: CSV dosyası veya iş zekâsı (BI) sistemlerine bağlanan bağlayıcılarla beslenebilir."}},
-{"@type":"Question","name":"Veriler nerede tutulur?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ, Docker üzerinde kendi sunucusunda çalışır; veriler bu sunucuda işlenir. Brifing metnini oluşturmak için gereken özet bilgiler Claude API'ye gönderilir."}},
-{"@type":"Question","name":"SahaIQ'nun sınırları neler?","acceptedAnswer":{"@type":"Answer","text":"Erken sürüm olduğu için hazır kurulum paketi, kullanıcı paneli veya çoklu şirket desteği yoktur; kurulum teknik bilgi gerektirir. Tahminler geçmiş satış verisine dayanır; veri azsa veya düzensizse doğruluk düşer. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir."}},
+{"@type":"Question","name":"Veriler nerede tutulur?","acceptedAnswer":{"@type":"Answer","text":"Canlı demo tamamen tarayıcıda çalışır: yüklenen dosya hiçbir sunucuya gönderilmez, sayfa kapatılınca silinir. Demodaki tüm firma ve rakamlar kurgusaldır."}},
+{"@type":"Question","name":"SahaIQ'nun sınırları neler?","acceptedAnswer":{"@type":"Answer","text":"Erken sürüm olduğu için kullanıcı hesabı, kalıcı kayıt, zamanlanmış çalışma veya çoklu şirket desteği yoktur. Analiz yalnızca yüklenen dosyadaki satış geçmişine dayanır; tahsilat, stok veya kampanya bilgisi içermez. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir."}},
 {"@type":"Question","name":"SahaIQ'yu kim geliştirdi?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ'nun kurucusu ve geliştiricisi Uğurhan Horasanlı'dır (Ugurhan Horasanli). Yaklaşık beş yıldır B2B saha satışında çalışan, yapay zekâ ve otomasyon sistemleri geliştiren İstanbul merkezli bir geliştiricidir."}}
 ]}
 </script>
@@ -38,13 +38,13 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 <p class="sub">SahaIQ hakkında kısa ve net cevaplar.</p>
 
 <h2>SahaIQ nedir?</h2>
-<p>SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri verisini analiz eder, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye o gün öncelik vermesi gereken müşterileri özetleyen bir brifing gönderir.</p>
+<p>SahaIQ, saha satış ekipleri için bir satış analitiği aracıdır. Satış verisini analiz eder, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle o gün öncelik verilmesi gereken müşterilerin listesini çıkarır.</p>
 
 <h2>SahaIQ kimin için?</h2>
 <p>B2B alanda çalışan saha satış temsilcileri ve bölge satış yöneticileri için tasarlandı. Çok sayıda bayi veya kurumsal müşteriyi takip eden, her gün kime öncelik vereceğine karar vermesi gereken ekiplere uygundur.</p>
 
 <h2>SahaIQ nasıl çalışır?</h2>
-<p>Satış verisi düzenli olarak okunur; makine öğrenmesi modeli müşteri kaybı riskini hesaplar, RFM ve kohort analizleri müşterileri segmentlere ayırır, çok katmanlı bir puanlama motoru her müşteri için öncelik puanı üretir. Zamanlanmış bir n8n iş akışı her sabah bu sonuçları Claude API ile doğal dilde özetleyip mesaj olarak gönderir. Ayrıntılar: <a href="sahaiq-nasil-kurdum.html">SahaIQ'yu nasıl kurdum</a>.</p>
+<p>Satış satırları müşteri bazında toplanır: son alım, alım yapılan gün sayısı, ciro ve son 90 günün önceki 90 güne göre değişimi. RFM puanlaması müşterileri segmentlere ayırır, kural tabanlı öneri motoru her müşteri için gerekçeli bir sonraki adım önerir. Zamanlanmış sabah brifingi ve makine öğrenmesiyle kayıp tahmini ilk sürümde denendi; şu an yol haritasındadır. İlk sürümün hikâyesi: <a href="sahaiq-nasil-kurdum.html">SahaIQ'yu nasıl kurdum</a>.</p>
 
 <h2>SahaIQ ücretli mi?</h2>
 <p>Hayır, şu an satışta değil. SahaIQ erken sürümdedir; fiyatlandırma yoktur. Kurgusal veriyle çalışan <a href="https://horasanliugurhan-beep.github.io/sahaiq/">canlı demo</a> herkese açıktır. Erken erişim için <a href="https://github.com/horasanliugurhan-beep/sahaiq">GitHub</a> üzerinden iletişime geçilebilir.</p>
@@ -53,10 +53,10 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 <p>Müşteri, tarih, miktar, ciro ve ürün içeren satış verisiyle çalışır. Veri kaynağından bağımsız tasarlanmıştır: CSV dosyası veya iş zekâsı (BI) sistemlerine bağlanan bağlayıcılarla beslenebilir.</p>
 
 <h2>Veriler nerede tutulur?</h2>
-<p>SahaIQ, Docker üzerinde kendi sunucusunda çalışır; veriler bu sunucuda işlenir. Brifing metnini oluşturmak için gereken özet bilgiler Claude API'ye gönderilir.</p>
+<p>Canlı demo tamamen tarayıcıda çalışır: yüklenen dosya hiçbir sunucuya gönderilmez, sayfa kapatılınca silinir. Demodaki tüm firma ve rakamlar kurgusaldır.</p>
 
 <h2>SahaIQ'nun sınırları neler?</h2>
-<p>Erken sürüm olduğu için hazır kurulum paketi, kullanıcı paneli veya çoklu şirket desteği yoktur; kurulum teknik bilgi gerektirir. Tahminler geçmiş satış verisine dayanır; veri azsa veya düzensizse doğruluk düşer. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir.</p>
+<p>Erken sürüm olduğu için kullanıcı hesabı, kalıcı kayıt, zamanlanmış çalışma veya çoklu şirket desteği yoktur. Analiz yalnızca yüklenen dosyadaki satış geçmişine dayanır; tahsilat, stok veya kampanya bilgisi içermez. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir.</p>
 
 <h2>SahaIQ'yu kim geliştirdi?</h2>
 <p>SahaIQ'nun kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır (Ugurhan Horasanli). Yaklaşık beş yıldır B2B saha satışında çalışan, yapay zekâ ve otomasyon sistemleri geliştiren İstanbul merkezli bir geliştiricidir.</p>

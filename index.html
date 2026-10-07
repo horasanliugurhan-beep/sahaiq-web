@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SahaIQ · Saha satış ekipleri için yapay zekâ destekli satış analitiği</title>
-<meta name="description" content="SahaIQ; saha satış ekipleri için müşteri kaybı tahmini, RFM segmentasyonu ve her sabah yapay zekâ ile hazırlanan müşteri brifingleri sunan satış analitiği ve CRM aracıdır.">
+<title>SahaIQ · Saha satış ekipleri için satış analitiği</title>
+<meta name="description" content="SahaIQ; saha satış ekipleri için RFM segmentasyonu, düşüş ve sessizlik sinyalleri ve gerekçeli arama listesi sunan satış analitiği aracıdır. Kurgusal veriyle veya kendi CSV dosyanızla tarayıcıda deneyebilirsiniz.">
 <link rel="canonical" href="https://sahaiq.app/">
 <style>
 :root{--bg:#fafaf8;--fg:#1c1c1a;--mut:#5f5f5a;--card:#fff;--line:#e4e4df;--acc:#1f6f5c}
@@ -30,7 +30,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 .pj-lk{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:15px}.pj-lk a{color:var(--acc);font-weight:600;text-decoration:none;padding:4px 0}.pj-lk a:hover{text-decoration:underline}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"]},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için yapay zekâ destekli satış analitiği ve CRM.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"]},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için RFM segmentasyonu ve gerekçeli arama listesi sunan satış analitiği aracı.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}]}
 </script>
 </head>
 <body>
@@ -40,33 +40,34 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <header>
 <span class="tag">Erken sürüm</span>
 <h1>Sabah ilk kimi arayacağınızı bilerek güne başlayın.</h1>
-<p class="lead">SahaIQ, saha satış ekipleri için yapay zekâ destekli bir satış analitiği ve CRM aracı. Müşteri verisini okur, kaybolmak üzere olan müşterileri önceden işaretler ve her sabah temsilciye kısa, uygulanabilir bir brifing gönderir.</p>
+<p class="lead">SahaIQ, saha satış ekipleri için bir satış analitiği aracı. Satış verisini okur, sessizleşen ve alımı düşen müşterileri işaretler, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
 <a class="btn" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu deneyin</a>
 <p class="demo-note">Kurgusal 40 bayilik veriyle çalışır; kendi CSV dosyanızı da yükleyebilirsiniz. Dosya yalnızca tarayıcınızda işlenir. <a href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kod</a></p>
 </header>
 
 <section id="kisa-cevap">
 <h2>Kısa cevap: SahaIQ nedir?</h2>
-<p>SahaIQ, B2B saha satış ekipleri için geliştirilmiş, yapay zekâ destekli bir satış analitiği ve CRM aracıdır. Müşteri kaybı riskini makine öğrenmesiyle tahmin eder, müşterileri RFM ile segmentlere ayırır ve her sabah temsilciye "bugün önce kimi aramalıyım?" sorusunun cevabını içeren kısa bir brifing gönderir. Erken sürümdedir, şu an satışta değildir. Kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır. Daha fazlası: <a href="sss.html">Sık sorulan sorular</a>.</p>
+<p>SahaIQ, B2B saha satış ekipleri için geliştirilmiş bir satış analitiği aracıdır. Satış verisini okur, müşterileri RFM ile segmentlere ayırır, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle "bugün önce kimi aramalıyım?" listesini çıkarır. Erken sürümdedir, şu an satışta değildir. Kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır. Daha fazlası: <a href="sss.html">Sık sorulan sorular</a>.</p>
 </section>
 
 <section id="ozellikler">
 <h2>Neler yapıyor?</h2>
 <div class="g">
-<div class="c"><h3>Sabah brifingi</h3><p>Her sabah otomatik çalışan akış, gün içinde öncelik verilmesi gereken müşterileri yapay zekâ ile özetleyip mesaj olarak iletir.</p></div>
-<div class="c"><h3>Müşteri kaybı tahmini</h3><p>Makine öğrenmesi modeli, sipariş davranışı değişen müşterileri kaybedilmeden önce tespit eder.</p></div>
-<div class="c"><h3>RFM ve kohort analizi</h3><p>Müşterileri sıklık, yakınlık ve ciroya göre segmentlere ayırır; elde tutma oranlarını dönem dönem izler.</p></div>
-<div class="c"><h3>Puanlama motoru</h3><p>Çok katmanlı skorlama ile her müşteri için tek bir öncelik puanı üretir; Pareto analiziyle ciroyu taşıyan müşterileri gösterir.</p></div>
+<div class="c"><h3>Gerekçeli arama listesi</h3><p>Öncelik sırasına göre "bugün kimi aramalı" listesi çıkarır. Her önerinin yanında hangi kuralın neden tetiklendiği yazar; kara kutu yoktur.</p></div>
+<div class="c"><h3>RFM segmentasyonu</h3><p>Müşterileri son alım, alım sıklığı ve ciroya göre Şampiyon, Sadık, Risk altında, Yeni, Standart ve Pasif segmentlerine ayırır.</p></div>
+<div class="c"><h3>Düşüş ve sessizlik sinyalleri</h3><p>Son 90 günü önceki 90 günle karşılaştırır; alımı belirgin düşen ve uzun süredir sessiz kalan müşterileri işaretler. Pareto ile ciroyu taşıyan müşterileri gösterir.</p></div>
+<div class="c"><h3>Kendi verinizle deneyin</h3><p>CSV yükleyin; ERP başlıkları ve Türkçe sayı/tarih biçimleri otomatik tanınır. Dosya yalnızca tarayıcınızda işlenir, sunucuya gönderilmez.</p></div>
 </div>
+<p class="demo-note">Yol haritası: zamanlanmış sabah brifingi ve makine öğrenmesiyle müşteri kaybı tahmini. İlk sürümde denendi; doğruluk ve veri güvenliği şartları sağlanana kadar yayında değildir.</p>
 </section>
 
 <section>
 <h2>Nasıl çalışıyor?</h2>
 <ul>
-<li>Otomasyon katmanı: <code>n8n</code> iş akışları, zamanlanmış görevler</li>
-<li>Yapay zekâ: <code>Claude API</code> ile doğal dilde müşteri özetleri</li>
-<li>Analiz: <code>Python</code>, <code>scikit-learn</code>, <code>Streamlit</code> paneli</li>
-<li>Altyapı: <code>Docker</code> üzerinde kendi sunucusunda çalışır</li>
+<li>Veri: CSV dosyası (Excel veya ERP dökümü); iş zekâsı bağlayıcıları geliştirme aşamasında</li>
+<li>Analiz: müşteri bazında son alım, sıklık, ciro ve 90/90 gün trendi; RFM puanlaması</li>
+<li>Öneri motoru: kural tabanlı ve açıklanabilir; her öneri gerekçesini gösterir</li>
+<li>Teknoloji: <code>JavaScript</code>, <code>Next.js</code>; her değişiklik otomatik testlerden geçmeden yayına çıkmaz</li>
 </ul>
 </section>
 
@@ -81,7 +82,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <section id="yazilar">
 <h2>Yazılar</h2>
 <div class="g">
-<div class="c"><h3><a href="sahaiq-nasil-kurdum.html" style="color:inherit">SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi</a></h3><p>RFM analizi, müşteri kaybı tahmini, Claude API ve n8n ile saha satışında "bugün önce kimi aramalıyım?" sorusuna her sabah hazır cevap. · Uğurhan Horasanlı</p></div>
+<div class="c"><h3><a href="sahaiq-nasil-kurdum.html" style="color:inherit">SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi</a></h3><p>İlk sürümün hikâyesi: RFM, kayıp tahmini, Claude API ve n8n ile kurulan sabah brifingi ve ondan çıkan dersler. · Uğurhan Horasanlı</p></div>
 </div>
 </section>
 
