@@ -42,7 +42,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <h1>Sabah ilk kimi arayacağınızı bilerek güne başlayın.</h1>
 <p class="lead">SahaIQ, saha satış ekipleri için bir satış analitiği aracı. Satış verisini okur, sessizleşen ve alımı düşen müşterileri işaretler, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
 <a class="btn" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu deneyin</a>
-<p class="demo-note">Kurgusal 40 bayilik veriyle çalışır; kendi CSV dosyanızı da yükleyebilirsiniz. Dosya yalnızca tarayıcınızda işlenir. <a href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kod</a></p>
+<p class="demo-note">Kurgusal 40 bayilik veriyle çalışır; kendi Excel veya CSV dosyanızı da yükleyebilirsiniz. Dosya yalnızca tarayıcınızda işlenir. <a href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kod</a></p>
 </header>
 
 <section id="kisa-cevap">
@@ -56,7 +56,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <div class="c"><h3>Gerekçeli arama listesi</h3><p>Öncelik sırasına göre "bugün kimi aramalı" listesi çıkarır. Her önerinin yanında hangi kuralın neden tetiklendiği yazar; kara kutu yoktur.</p></div>
 <div class="c"><h3>RFM segmentasyonu</h3><p>Müşterileri son alım, alım sıklığı ve ciroya göre Şampiyon, Sadık, Risk altında, Yeni, Standart ve Pasif segmentlerine ayırır.</p></div>
 <div class="c"><h3>Düşüş ve sessizlik sinyalleri</h3><p>Son 90 günü önceki 90 günle karşılaştırır; alımı belirgin düşen ve uzun süredir sessiz kalan müşterileri işaretler. Pareto ile ciroyu taşıyan müşterileri gösterir.</p></div>
-<div class="c"><h3>Kendi verinizle deneyin</h3><p>CSV yükleyin; ERP başlıkları ve Türkçe sayı/tarih biçimleri otomatik tanınır. Dosya yalnızca tarayıcınızda işlenir, sunucuya gönderilmez.</p></div>
+<div class="c"><h3>Her kaynaktan veri</h3><p>Excel (.xlsx), CSV veya herhangi bir ERP/BI ekranından kopyalanmış tablo. Yaygın ERP başlıkları otomatik tanınır, farklı rapor düzenleri bir kez eşleştirilip hatırlanır. Dosya yalnızca tarayıcınızda işlenir.</p></div>
 </div>
 <p class="demo-note">Yol haritası: zamanlanmış sabah brifingi ve makine öğrenmesiyle müşteri kaybı tahmini. İlk sürümde denendi; doğruluk ve veri güvenliği şartları sağlanana kadar yayında değildir.</p>
 </section>
@@ -64,7 +64,7 @@ footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid 
 <section>
 <h2>Nasıl çalışıyor?</h2>
 <ul>
-<li>Veri: CSV dosyası (Excel veya ERP dökümü); iş zekâsı bağlayıcıları geliştirme aşamasında</li>
+<li>Veri: Excel (.xlsx), CSV/TSV veya yapıştırılan tablo; iş zekâsı bağlayıcıları geliştirme aşamasında</li>
 <li>Analiz: müşteri bazında son alım, sıklık, ciro ve 90/90 gün trendi; RFM puanlaması</li>
 <li>Öneri motoru: kural tabanlı ve açıklanabilir; her öneri gerekçesini gösterir</li>
 <li>Teknoloji: <code>JavaScript</code>, <code>Next.js</code>; her değişiklik otomatik testlerden geçmeden yayına çıkmaz</li>
