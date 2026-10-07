@@ -42,7 +42,6 @@ body {
   background: var(--paper);
   color: var(--ink);
   font: 400 1.0625rem/1.6 "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-feature-settings: "tnum" 1;
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--petrol); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
@@ -102,6 +101,7 @@ p { margin: 0 0 1em; }
   padding: 0.85rem 0.35rem; border-bottom: 1px solid var(--rule); background: var(--surface);
 }
 .queue li:last-child { border-bottom: 0; }
+.queue .rk, .steps li::before { font-variant-numeric: tabular-nums; }
 .queue .rk { font-weight: 700; color: var(--ink-3); font-size: 0.95rem; padding-top: 0.05rem; }
 .queue .who { font-weight: 650; }
 .queue .why { display: block; color: var(--ink-2); font-size: 0.92rem; line-height: 1.4; margin-top: 0.15rem; }
