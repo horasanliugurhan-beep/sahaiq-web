@@ -4,89 +4,208 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SahaIQ · Saha satış ekipleri için satış analitiği</title>
-<meta name="description" content="SahaIQ; saha satış ekipleri için RFM segmentasyonu, düşüş ve sessizlik sinyalleri ve gerekçeli arama listesi sunan satış analitiği aracıdır. Kurgusal veriyle veya kendi CSV dosyanızla tarayıcıda deneyebilirsiniz.">
+<meta name="description" content="SahaIQ; saha satış ekipleri için RFM segmentasyonu, düşüş ve sessizlik sinyalleri ve gerekçeli arama listesi sunan satış analitiği aracıdır. Kurgusal veriyle ya da kendi Excel/CSV dosyanızla tarayıcıda deneyebilirsiniz.">
 <link rel="canonical" href="https://sahaiq.app/">
-<style>
-:root{--bg:#fafaf8;--fg:#1c1c1a;--mut:#5f5f5a;--card:#fff;--line:#e4e4df;--acc:#1f6f5c}
-@media (prefers-color-scheme:dark){:root{--bg:#131412;--fg:#ececea;--mut:#a3a39d;--card:#1b1c1a;--line:#2c2d2a;--acc:#5fc4a8}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:880px;margin:0 auto;padding:0 20px}
-nav{display:flex;flex-wrap:wrap;gap:8px 0;justify-content:space-between;align-items:center;padding:22px 0}nav div{display:flex;flex-wrap:wrap;gap:4px 16px}nav div a{margin-left:0!important}
-nav b{font-size:20px;letter-spacing:-.3px}nav b span{color:var(--acc)}
-nav a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:15px}nav a:hover{color:var(--fg)}
-header{padding:56px 0 40px}h1{font-size:clamp(30px,5vw,46px);line-height:1.15;letter-spacing:-.8px;margin:0 0 18px}
-.lead{font-size:19px;color:var(--mut);max-width:640px}
-.demo-note{font-size:14px;opacity:.75;margin-top:10px}
-.btn{display:inline-block;margin-top:26px;background:var(--acc);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600}
-@media (prefers-color-scheme:dark){.btn{color:#0d1f1a}}
-.tag{display:inline-block;font-size:13px;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:2px 10px;margin-bottom:18px}
-section{padding:34px 0;border-top:1px solid var(--line)}h2{font-size:24px;margin:0 0 18px;letter-spacing:-.3px}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}.c h3{margin:0 0 6px;font-size:17px}.c p{margin:0;color:var(--mut);font-size:15px}
-ul{padding-left:20px}li{margin:6px 0}code{font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
-footer{padding:30px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}footer a{color:var(--mut)}
-.pj-tag{display:inline-block;font-size:12px;font-weight:600;line-height:1.5;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:1px 9px;margin-bottom:10px}
-.c p.pj-st{margin:0 0 8px;color:var(--fg);font-size:15px;font-weight:500}.c p.pj-nt{margin-top:10px;font-size:13px}
-.pj-lk{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:15px}.pj-lk a{color:var(--acc);font-weight:600;text-decoration:none;padding:4px 0}.pj-lk a:hover{text-decoration:underline}
-</style>
+<meta name="theme-color" content="#f4f6f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121a21" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"]},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için RFM segmentasyonu ve gerekçeli arama listesi sunan satış analitiği aracı.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}]}
 </script>
 </head>
 <body>
-<div class="w">
-<nav><b>Saha<span>IQ</span></b><div><a href="#ozellikler">Özellikler</a><a href="#projeler">Projeler</a><a href="#yazilar">Yazılar</a><a href="sss.html">SSS</a><a href="hakkinda.html">Hakkında</a></div></nav>
-
-<header>
-<span class="tag">Erken sürüm</span>
-<h1>Sabah ilk kimi arayacağınızı bilerek güne başlayın.</h1>
-<p class="lead">SahaIQ, saha satış ekipleri için bir satış analitiği aracı. Satış verisini okur, sessizleşen ve alımı düşen müşterileri işaretler, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
-<a class="btn" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu deneyin</a>
-<p class="demo-note">Kurgusal 40 bayilik veriyle çalışır; kendi Excel veya CSV dosyanızı da yükleyebilirsiniz. Dosya yalnızca tarayıcınızda işlenir. <a href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kod</a></p>
+<header class="wrap top">
+  <a class="mark" href="index.html">Saha<span>IQ</span></a>
+  <nav aria-label="Site">
+    <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a>
+    <a class="wide" href="#nasil">Nasıl çalışır</a>
+    <a href="sss.html">SSS</a>
+    <a href="hakkinda.html">Hakkında</a>
+    <a class="wide" href="https://github.com/horasanliugurhan-beep/sahaiq">GitHub</a>
+  </nav>
 </header>
 
-<section id="kisa-cevap">
-<h2>Kısa cevap: SahaIQ nedir?</h2>
-<p>SahaIQ, B2B saha satış ekipleri için geliştirilmiş bir satış analitiği aracıdır. Satış verisini okur, müşterileri RFM ile segmentlere ayırır, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle "bugün önce kimi aramalıyım?" listesini çıkarır. Erken sürümdedir, şu an satışta değildir. Kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır. Daha fazlası: <a href="sss.html">Sık sorulan sorular</a>.</p>
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Sabah ilk kimi arayacağınızı bilerek güne başlayın.</h1>
+    <p class="lead">SahaIQ satış dökümünüzü okur, sessizleşen ve alımı düşen müşterileri bulur, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
+    <div class="actions">
+      <a class="btn" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu açın</a>
+      <a class="textlink" href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kodu inceleyin</a>
+    </div>
+    <p class="small">Demo 40 kurgusal bayiyle açılır. Kendi Excel ya da CSV dosyanızı da yükleyebilirsiniz; dosya tarayıcınızdan dışarı çıkmaz.</p>
+  </div>
+
+  <div class="queue-panel">
+    <div class="queue-head">
+      <h2 id="queue-title">Bugünün listesi</h2>
+      <button type="button" id="replay" hidden>Yeniden sırala</button>
+    </div>
+    <ol class="queue" id="queue" aria-labelledby="queue-title">
+      <li data-alpha="0"><span class="rk">1</span><div><span class="who">Bulut Jant &amp; Lastik</span><span class="why">Eskiden düzenli alan müşteri 54 gündür sessiz</span></div><span class="when p3">Bugün</span></li>
+      <li data-alpha="5"><span class="rk">2</span><div><span class="who">Ufuk Oto Lastik</span><span class="why">Eskiden düzenli alan müşteri 53 gündür sessiz</span></div><span class="when p3">Bugün</span></li>
+      <li data-alpha="3"><span class="rk">8</span><div><span class="who">Ege Lastik Merkezi</span><span class="why">Son 90 günde alım önceki 90 güne göre %95 düştü</span></div><span class="when p3">Bugün</span></li>
+      <li data-alpha="4"><span class="rk">18</span><div><span class="who">İnci Jant &amp; Lastik</span><span class="why">Sadık müşteri 31 gündür alım yapmadı (hedef: 30 gün)</span></div><span class="when p2">Bu hafta</span></li>
+      <li data-alpha="2"><span class="rk">19</span><div><span class="who">Defne Jant &amp; Lastik</span><span class="why">Yeni müşteri: ilk alımlar yapıldı, ilişki henüz oturmadı</span></div><span class="when p2">Bu hafta</span></li>
+      <li data-alpha="1"><span class="rk">24</span><div><span class="who">Çam Jant &amp; Lastik</span><span class="why">Uzun süredir pasif (172 gün)</span></div><span class="when p1">Fırsat olunca</span></li>
+    </ol>
+    <div class="queue-foot"><p>Demo verisinden gerçek hesap çıktısı. Numara, müşterinin 29 kişilik arama listesindeki sırası.</p></div>
+  </div>
 </section>
 
-<section id="ozellikler">
-<h2>Neler yapıyor?</h2>
-<div class="g">
-<div class="c"><h3>Gerekçeli arama listesi</h3><p>Öncelik sırasına göre "bugün kimi aramalı" listesi çıkarır. Her önerinin yanında hangi kuralın neden tetiklendiği yazar; kara kutu yoktur.</p></div>
-<div class="c"><h3>RFM segmentasyonu</h3><p>Müşterileri son alım, alım sıklığı ve ciroya göre Şampiyon, Sadık, Risk altında, Yeni, Standart ve Pasif segmentlerine ayırır.</p></div>
-<div class="c"><h3>Düşüş ve sessizlik sinyalleri</h3><p>Son 90 günü önceki 90 günle karşılaştırır; alımı belirgin düşen ve uzun süredir sessiz kalan müşterileri işaretler. Pareto ile ciroyu taşıyan müşterileri gösterir.</p></div>
-<div class="c"><h3>Her kaynaktan veri</h3><p>Excel (.xlsx), CSV veya herhangi bir ERP/BI ekranından kopyalanmış tablo. Yaygın ERP başlıkları otomatik tanınır, farklı rapor düzenleri bir kez eşleştirilip hatırlanır. Dosya yalnızca tarayıcınızda işlenir.</p></div>
-</div>
-<p class="demo-note">Yol haritası: zamanlanmış sabah brifingi ve makine öğrenmesiyle müşteri kaybı tahmini. İlk sürümde denendi; doğruluk ve veri güvenliği şartları sağlanana kadar yayında değildir.</p>
+<section class="band" id="kisa-cevap">
+  <div class="wrap">
+    <h2>Kısa cevap: SahaIQ nedir?</h2>
+    <p class="short">SahaIQ, B2B saha satış ekipleri için geliştirilmiş bir satış analitiği aracıdır. Satış verisini okur, müşterileri RFM ile segmentlere ayırır, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle "bugün önce kimi aramalıyım?" listesini çıkarır. Erken sürümdedir, şu an satışta değildir. Kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır. Daha fazlası: <a href="sss.html">Sık sorulan sorular</a>.</p>
+  </div>
 </section>
 
-<section>
-<h2>Nasıl çalışıyor?</h2>
-<ul>
-<li>Veri: Excel (.xlsx), CSV/TSV veya yapıştırılan tablo; iş zekâsı bağlayıcıları geliştirme aşamasında</li>
-<li>Analiz: müşteri bazında son alım, sıklık, ciro ve 90/90 gün trendi; RFM puanlaması</li>
-<li>Öneri motoru: kural tabanlı ve açıklanabilir; her öneri gerekçesini gösterir</li>
-<li>Teknoloji: <code>JavaScript</code>, <code>Next.js</code>; her değişiklik otomatik testlerden geçmeden yayına çıkmaz</li>
-</ul>
+<section class="band" id="nasil">
+  <div class="wrap">
+    <h2>Dosyadan arama listesine dört adım</h2>
+    <p class="intro">Hangi sistemi kullandığınız fark etmez. Veri nereden gelirse gelsin aynı kontrollerden ve aynı hesaptan geçer.</p>
+    <ol class="steps">
+      <li><h3>Veriyi getirin</h3><p>Excel, CSV ya da herhangi bir ERP ekranından kopyalanmış tablo. Cari Kodu, Evrak Tarihi, Net Tutar gibi başlıklar kendiliğinden tanınır.</p></li>
+      <li><h3>Önce kontrol</h3><p>Okunamayan tarih, iki farklı ünvanla geçen cari kod ya da bozuk satır varsa analiz durur ve satır numarasıyla gösterilir.</p></li>
+      <li><h3>Hesap</h3><p>Her müşteri için son alım, alım sıklığı, ciro ve son 90 günün önceki 90 güne göre değişimi. İadeler alım sayılmaz.</p></li>
+      <li><h3>Liste ve brifing</h3><p>Öncelik sırasına dizilmiş arama listesi ve WhatsApp'a ya da Telegram'a yapıştırılabilecek sabah brifingi.</p></li>
+    </ol>
+  </div>
 </section>
 
-<section id="projeler">
-<h2>Diğer projeler</h2>
-<div class="g">
-<div class="c"><span class="pj-tag">İnteraktif demo</span><h3>TradeIQ</h3><p class="pj-st">İşlem simülasyonu ve risk karşılaştırması</p><p>Kurgusal verilerle sanal işlemleri adım adım gösteren bir proje. İşlem gerekçelerini, komisyonları ve farklı stop ayarlarının sonuçlarını incelemeyi sağlar.</p><p class="pj-nt">Kurgusal veri kullanır; gerçek para işlemi içermez.</p><div class="pj-lk"><a href="https://horasanliugurhan-beep.github.io/tradeiq/" target="_blank" rel="noopener noreferrer">Demoyu aç</a><a href="https://github.com/horasanliugurhan-beep/tradeiq" target="_blank" rel="noopener noreferrer">Kaynak kod</a></div></div>
-<div class="c"><h3>Otomasyon işleri</h3><p>n8n iş akışları, Selenium ile web otomasyonu, Telegram ve WhatsApp entegrasyonları, MCP ile yapay zekâ ajan bağlantıları.</p></div>
-</div>
+<section class="band" id="ozellikler">
+  <div class="wrap">
+    <h2>Brifingdeki her rakam veriden gelir</h2>
+    <div class="split">
+      <div>
+        <p class="intro">Kimin aranacağına ve rakamlara kod karar verir. Metin şablonla kurulur, gönderilmeden önce içindeki her sayı veriyle karşılaştırılır.</p>
+        <ul class="plain">
+          <li><strong>Fiyat, stok ya da kampanya vaadi yok.</strong> Satış dökümünde bu bilgi yoksa brifingde de olmaz.</li>
+          <li><strong>Bayiye rakamla gidilmez.</strong> Önerilen açılış cümleleri saygılıdır; "ciron düştü" demez.</li>
+          <li><strong>Veri tarihi hep görünür.</strong> Eski bir döküm yüklenirse bugünün durumu gibi sunulmaz.</li>
+        </ul>
+      </div>
+      <div>
+<pre class="brief" aria-label="Demo verisinden brifing örneği">🗓 SAHA BRİFİNGİ · veri tarihi <mark>27</mark> Eylül <mark>2026</mark>
+
+🔴 BUGÜN ARA (<mark>5</mark> / toplam <mark>17</mark>)
+1) Bulut Jant &amp; Lastik · Risk altında
+   • Son alım <mark>54</mark> gün önce (<mark>4</mark> Ağustos <mark>2026</mark>)
+   • Son <mark>90</mark> gün <mark>₺53.973</mark>, önceki <mark>90</mark> gün <mark>₺442.265</mark> (<mark>-%88</mark>)
+   • En çok aldığı ürün: Kış 225/45 R17
+   → Kaybedilen talebi araştırın, geri kazanım görüşmesi planlayın.
+   💬 "Merhaba, uzun zamandır konuşamadık, her şey yolunda mı? Bu hafta uğrayıp önümüzdeki dönemin ihtiyaçlarını birlikte planlayalım mı?"</pre>
+        <div class="guard">
+          <span class="ok">✓ İşaretli rakamların hepsi hesaplanan veride var.</span>
+          <span class="no">✗ <s>"R21 takımda ₺22.000 özel fiyat"</s> veride yok; böyle bir cümle içeren metin gönderilmez.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="yazilar">
-<h2>Yazılar</h2>
-<div class="g">
-<div class="c"><h3><a href="sahaiq-nasil-kurdum.html" style="color:inherit">SahaIQ'yu nasıl kurdum: Her sabah otomatik gelen müşteri brifingi</a></h3><p>İlk sürümün hikâyesi: RFM, kayıp tahmini, Claude API ve n8n ile kurulan sabah brifingi ve ondan çıkan dersler. · Uğurhan Horasanlı</p></div>
-</div>
+<section class="band">
+  <div class="wrap">
+    <h2>Bugün ne yapıyor, ne yapmıyor</h2>
+    <div class="scope">
+      <div>
+        <h3>Bugün çalışan</h3>
+        <ul>
+          <li>Excel, CSV ve yapıştırılan tablodan analiz</li>
+          <li>RFM segmentleri ve 90 günlük düşüş sinyali</li>
+          <li>Gerekçeli arama listesi ve brifing önizlemesi</li>
+          <li>Tamamen tarayıcıda; veri sunucuya gitmez</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bilerek yapmadığı</h3>
+        <ul>
+          <li>Fiyat, stok ve kampanya önerisi</li>
+          <li>Yapay zekânın rakam ya da karar üretmesi</li>
+          <li>Hatalı satırı sessizce atıp devam etmek</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sırada</h3>
+        <ul>
+          <li>Her sabah kendiliğinden gelen brifing</li>
+          <li>Makine öğrenmesiyle müşteri kaybı tahmini</li>
+          <li>İş zekâsı sistemlerine doğrudan bağlantı</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>SahaIQ · <a href="sss.html">SSS</a> · Kurucu ve geliştirici: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli) · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>
-</div>
+<section class="band" id="projeler">
+  <div class="wrap">
+    <h2>Diğer projeler ve yazılar</h2>
+    <ul class="rows">
+      <li>
+        <h3><a href="https://horasanliugurhan-beep.github.io/tradeiq/">TradeIQ</a></h3>
+        <p>Kurgusal verilerle sanal işlemleri adım adım gösteren bir simülasyon: işlem gerekçeleri, komisyonlar ve farklı stop ayarlarının sonuçları. Gerçek para işlemi içermez.</p>
+        <span class="links"><a href="https://horasanliugurhan-beep.github.io/tradeiq/">Demoyu aç</a><a href="https://github.com/horasanliugurhan-beep/tradeiq">Kaynak kod</a></span>
+      </li>
+      <li>
+        <h3>Otomasyon işleri</h3>
+        <p>n8n iş akışları, Selenium ile web otomasyonu, Telegram ve WhatsApp entegrasyonları, MCP ile yapay zekâ ajan bağlantıları.</p>
+        <span class="links"></span>
+      </li>
+      <li id="yazilar">
+        <h3><a href="sahaiq-nasil-kurdum.html">SahaIQ'yu nasıl kurdum</a></h3>
+        <p>İlk sürümün hikâyesi: RFM, kayıp tahmini, Claude API ve n8n ile kurulan sabah brifingi ve ondan çıkan dersler.</p>
+        <span class="links"><a href="sahaiq-nasil-kurdum.html">Yazıyı oku</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>SahaIQ. Kurucu ve geliştirici: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli)</span>
+    <nav aria-label="Alt bağlantılar"><a href="sss.html">SSS</a><a href="https://github.com/horasanliugurhan-beep">GitHub</a><a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a></nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var list = document.getElementById("queue");
+  var replay = document.getElementById("replay");
+  if (!list) return;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var final = Array.prototype.slice.call(list.children);
+  if (reduce) return; // static, already in priority order
+
+  function place(order) { order.forEach(function (li) { list.appendChild(li); }); }
+  function alpha() { return final.slice().sort(function (a, b) { return a.dataset.alpha - b.dataset.alpha; }); }
+
+  // FLIP: measure, reorder, invert, play.
+  function sortToPriority() {
+    var first = new Map(final.map(function (li) { return [li, li.getBoundingClientRect().top]; }));
+    place(final);
+    final.forEach(function (li) {
+      var dy = first.get(li) - li.getBoundingClientRect().top;
+      li.style.transition = "none";
+      li.style.transform = "translateY(" + dy + "px)";
+    });
+    list.offsetHeight;
+    final.forEach(function (li) { li.style.transition = ""; li.style.transform = ""; });
+    setTimeout(function () { list.classList.remove("unsorted"); if (replay) replay.hidden = false; }, 650);
+  }
+
+  function run() {
+    list.classList.add("unsorted");
+    place(alpha());
+    setTimeout(sortToPriority, 900);
+  }
+  run();
+  if (replay) replay.addEventListener("click", function () { replay.hidden = true; run(); });
+})();
+</script>
 </body>
 </html>

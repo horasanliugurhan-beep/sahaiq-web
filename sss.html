@@ -6,17 +6,10 @@
 <title>SahaIQ hakkında sık sorulan sorular · SahaIQ</title>
 <meta name="description" content="SahaIQ nedir, kimin içindir, nasıl çalışır, ücretli mi, verilerle nasıl çalışır? SahaIQ hakkında kısa ve net cevaplar.">
 <link rel="canonical" href="https://sahaiq.app/sss.html">
-<style>
-:root{--bg:#fafaf8;--fg:#1c1c1a;--mut:#5f5f5a;--line:#e4e4df;--acc:#1f6f5c}
-@media (prefers-color-scheme:dark){:root{--bg:#131412;--fg:#ececea;--mut:#a3a39d;--line:#2c2d2a;--acc:#5fc4a8}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:720px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-nav a{color:var(--mut);text-decoration:none;font-size:15px}nav b a{color:var(--fg);font-size:20px;font-weight:700}nav b span{color:var(--acc)}
-h1{font-size:clamp(28px,5vw,40px);letter-spacing:-.6px;margin:40px 0 10px}.sub{color:var(--mut);margin:0 0 20px}
-h2{font-size:20px;margin:32px 0 8px}a{color:var(--acc)}p{margin:0 0 10px}
-footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","url":"https://sahaiq.app/sss.html","inLanguage":"tr","mainEntity":[
 {"@type":"Question","name":"SahaIQ nedir?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ, saha satış ekipleri için bir satış analitiği aracıdır. Satış verisini analiz eder, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle o gün öncelik verilmesi gereken müşterilerin listesini çıkarır."}},
@@ -31,8 +24,17 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 </script>
 </head>
 <body>
-<div class="w">
-<nav><b><a href="index.html">Saha<span>IQ</span></a></b><a href="index.html">← Ana sayfa</a></nav>
+<header class="wrap top">
+  <a class="mark" href="index.html">Saha<span>IQ</span></a>
+  <nav aria-label="Site">
+    <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a>
+    <a class="wide" href="index.html#nasil">Nasıl çalışır</a>
+    <a href="sss.html" aria-current="page">SSS</a>
+    <a href="hakkinda.html">Hakkında</a>
+    <a class="wide" href="https://github.com/horasanliugurhan-beep/sahaiq">GitHub</a>
+  </nav>
+</header>
+<main class="wrap"><div class="page">
 
 <h1>Sık sorulan sorular</h1>
 <p class="sub">SahaIQ hakkında kısa ve net cevaplar.</p>
@@ -61,7 +63,12 @@ footer{margin-top:50px;padding:26px 0 50px;color:var(--mut);font-size:14px;borde
 <h2>SahaIQ'yu kim geliştirdi?</h2>
 <p>SahaIQ'nun kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır (Ugurhan Horasanli). Yaklaşık beş yıldır B2B saha satışında çalışan, yapay zekâ ve otomasyon sistemleri geliştiren İstanbul merkezli bir geliştiricidir.</p>
 
-<footer>© SahaIQ · Uğurhan Horasanlı (Ugurhan Horasanli) · <a href="https://github.com/horasanliugurhan-beep">GitHub</a></footer>
-</div>
+</div></main>
+<footer class="foot">
+  <div class="wrap">
+    <span>SahaIQ. Kurucu ve geliştirici: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli)</span>
+    <nav aria-label="Alt bağlantılar"><a href="sss.html">SSS</a><a href="https://github.com/horasanliugurhan-beep">GitHub</a><a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a></nav>
+  </div>
+</footer>
 </body>
 </html>
