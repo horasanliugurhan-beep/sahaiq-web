@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#262b31">
 <title>SahaIQ hakkında sık sorulan sorular · SahaIQ</title>
 <meta name="description" content="SahaIQ nedir, kimin içindir, nasıl çalışır, ücretli mi, verilerle nasıl çalışır, yapay zekâ nerede kullanılır? SahaIQ hakkında kısa ve net cevaplar.">
 <link rel="canonical" href="https://sahaiq.app/sss.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","url":"https://sahaiq.app/sss.html","inLanguage":"tr","mainEntity":[
 {"@type":"Question","name":"SahaIQ nedir?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ, saha satış ekipleri için bir satış analitiği aracıdır. Satış verisini analiz eder, sessizleşen ve alımı düşen müşterileri işaretler ve her biri için gerekçesiyle o gün öncelik verilmesi gereken müşterilerin listesini çıkarır."}},
@@ -19,22 +20,22 @@
 {"@type":"Question","name":"SahaIQ hangi verilerle çalışır?","acceptedAnswer":{"@type":"Answer","text":"Müşteri kodu, müşteri adı, tarih ve adet içeren satış verisiyle çalışır; tutar, ürün, marka ve bölge isteğe bağlıdır. Bugün Excel (.xlsx), CSV/TSV dosyası ya da herhangi bir ERP veya iş zekâsı ekranından kopyalanıp yapıştırılan tabloyla beslenir. İş zekâsı (BI) sistemlerine doğrudan bağlantı henüz yayında değil; yol haritasındadır."}},
 {"@type":"Question","name":"Veriler nerede tutulur?","acceptedAnswer":{"@type":"Answer","text":"Canlı demo tamamen tarayıcıda çalışır: yüklenen dosya hiçbir sunucuya gönderilmez, sayfa kapatılınca silinir. Tek istisna kullanıcının kendi tıklamasıdır: Brifingi WhatsApp'ta aç düğmesi brifing metnini WhatsApp'a aktarır; mesajı yine kullanıcı gönderir. Demodaki tüm firma ve rakamlar kurgusaldır. Ayrıntı: https://sahaiq.app/gizlilik.html"}},
 {"@type":"Question","name":"SahaIQ'nun sınırları neler?","acceptedAnswer":{"@type":"Answer","text":"Erken sürüm olduğu için kullanıcı hesabı, kalıcı kayıt, zamanlanmış çalışma veya çoklu şirket desteği yoktur. Analiz yalnızca yüklenen dosyadaki satış geçmişine dayanır; tahsilat, stok veya kampanya bilgisi içermez. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir."}},
-{"@type":"Question","name":"Yapay zekâ nerede kullanılıyor?","acceptedAnswer":{"@type":"Answer","text":"Bugünkü sürümde kimin aranacağına, rakamlara ve brifing metnine kod karar verir; ürünün içinde yapay zekâ çağrısı yoktur. Bu bilinçli bir tercih: ilk sürümde brifingi Claude API yazıyordu; metin iyiydi ama rakamlar ve teklifler her zaman doğrulanamıyordu. Yapay zekâ bugün geliştirmede kullanılıyor: SahaIQ, Claude (kodlama ve koordinasyon) ve Codex (bağımsız denetim) ile geliştiriliyor; her değişiklik otomatik testlerden ve karşılıklı incelemeden geçiyor. Yol haritasında Claude yalnızca brifing metnini sadeleştirecek; rakamlar yine koddan gelecek ve her metin gönderilmeden önce rakam bekçisinden geçecek."}},
+{"@type":"Question","name":"Yapay zekâ nerede kullanılıyor?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ'nun kendi içinde yapay zekâ çağrısı yoktur: kimin aranacağına, rakamlara ve brifing metnine kod karar verir. Claude ile birlikte kullanılabilir: SahaIQ, Claude'a salt okunur bir bağlayıcı (MCP) olarak eklenir; Claude soruyu anlayıp sorguyu ve paneli kurar, tutarlar, yüzdeler ve sıralama SahaIQ'nun test edilmiş hesabından gelir. Bağlayıcı şu an yalnızca kurgusal demo verisi verir. Bu ayrım bilinçli: ilk sürümde brifingi Claude API yazıyordu; metin iyiydi ama rakamlar ve teklifler her zaman doğrulanamıyordu. SahaIQ ayrıca Claude (kodlama ve koordinasyon) ve Codex (bağımsız denetim) ile geliştiriliyor; her değişiklik otomatik testlerden ve karşılıklı incelemeden geçiyor."}},
 {"@type":"Question","name":"SahaIQ'yu kim geliştirdi?","acceptedAnswer":{"@type":"Answer","text":"SahaIQ'nun kurucusu ve geliştiricisi Uğurhan Horasanlı'dır (Ugurhan Horasanli). Yaklaşık beş yıldır B2B saha satışında çalışan, yapay zekâ ve otomasyon sistemleri geliştiren İstanbul merkezli bir geliştiricidir."}}
 ]}
 </script>
 </head>
 <body>
-<header class="wrap top">
-  <a class="mark" href="index.html">Saha<span>IQ</span></a>
+<header class="road road-top"><div class="wrap top">
+  <a class="mark" href="index.html" aria-label="SahaIQ ana sayfa">Saha<span>IQ</span></a>
   <nav aria-label="Site">
     <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a>
     <a class="wide" href="index.html#nasil">Nasıl çalışır</a>
+    <a class="wide" href="index.html#claude">Claude ile</a>
     <a href="sss.html" aria-current="page">SSS</a>
     <a href="hakkinda.html">Hakkında</a>
-    <a class="wide" href="https://github.com/horasanliugurhan-beep/sahaiq">GitHub</a>
   </nav>
-</header>
+</div></header>
 <main class="wrap"><div class="page">
 
 <h1>Sık sorulan sorular</h1>
@@ -47,7 +48,7 @@
 <p>B2B alanda çalışan saha satış temsilcileri ve bölge satış yöneticileri için tasarlandı. Çok sayıda bayi veya kurumsal müşteriyi takip eden, her gün kime öncelik vereceğine karar vermesi gereken ekiplere uygundur.</p>
 
 <h2>SahaIQ nasıl çalışır?</h2>
-<p>Satış satırları müşteri bazında toplanır: son alım, alım yapılan gün sayısı, ciro ve son 90 günün önceki 90 güne göre değişimi. RFM puanlaması müşterileri segmentlere ayırır, kural tabanlı öneri motoru her müşteri için gerekçeli bir sonraki adım önerir. Zamanlanmış sabah brifingi ve makine öğrenmesiyle kayıp tahmini ilk sürümde denendi; şu an yol haritasındadır. İlk sürümün hikâyesi: <a href="sahaiq-nasil-kurdum.html">SahaIQ'yu nasıl kurdum</a>.</p>
+<p>Satış satırları müşteri bazında toplanır: son alım, alım yapılan gün sayısı, ciro ve son 90 günün önceki 90 güne göre değişimi. RFM puanlaması müşterileri segmentlere ayırır, kural tabanlı öneri motoru her müşteri için gerekçeli bir sonraki adım önerir. Zamanlanmış sabah brifingi ve makine öğrenmesiyle kayıp tahmini ilk sürümde denendi; şu an yol haritasındadır. İlk sürümün hikâyesi: <a href="sahaiq-nasil-kurdum.html">SahaIQ'nun ilk sürümü</a>.</p>
 
 <h2>SahaIQ ücretli mi?</h2>
 <p>Şu an ücretli değil. SahaIQ erken erişim aşamasındadır; henüz fiyatlandırma yoktur ve pilot kullanım görüşmelerine açıktır. Kurgusal veriyle çalışan <a href="https://horasanliugurhan-beep.github.io/sahaiq/">canlı demo</a> herkese açıktır. İletişim: <a href="mailto:info@sahaiq.app">info@sahaiq.app</a>.</p>
@@ -62,7 +63,7 @@
 <p>Erken sürüm olduğu için kullanıcı hesabı, kalıcı kayıt, zamanlanmış çalışma veya çoklu şirket desteği yoktur. Analiz yalnızca yüklenen dosyadaki satış geçmişine dayanır; tahsilat, stok veya kampanya bilgisi içermez. Temsilcinin saha bilgisinin yerine geçmez, ona öncelik önerir.</p>
 
 <h2>Yapay zekâ nerede kullanılıyor?</h2>
-<p>Bugünkü sürümde kimin aranacağına, rakamlara ve brifing metnine kod karar verir; ürünün içinde yapay zekâ çağrısı yoktur. Bu bilinçli bir tercih: ilk sürümde brifingi Claude API yazıyordu; metin iyiydi ama rakamlar ve teklifler her zaman doğrulanamıyordu. Yapay zekâ bugün geliştirmede kullanılıyor: SahaIQ, Claude (kodlama ve koordinasyon) ve Codex (bağımsız denetim) ile geliştiriliyor; her değişiklik otomatik testlerden ve karşılıklı incelemeden geçiyor. Yol haritasında Claude yalnızca brifing metnini sadeleştirecek; rakamlar yine koddan gelecek ve her metin gönderilmeden önce rakam bekçisinden geçecek.</p>
+<p>SahaIQ'nun kendi içinde yapay zekâ çağrısı yoktur: kimin aranacağına, rakamlara ve brifing metnine kod karar verir. Claude ile birlikte kullanılabilir: SahaIQ, Claude'a salt okunur bir bağlayıcı (MCP) olarak eklenir; Claude soruyu anlayıp sorguyu ve paneli kurar, tutarlar, yüzdeler ve sıralama SahaIQ'nun test edilmiş hesabından gelir. Bağlayıcı şu an yalnızca kurgusal demo verisi verir. Bu ayrım bilinçli: ilk sürümde brifingi Claude API yazıyordu; metin iyiydi ama rakamlar ve teklifler her zaman doğrulanamıyordu. SahaIQ ayrıca Claude (kodlama ve koordinasyon) ve Codex (bağımsız denetim) ile geliştiriliyor; her değişiklik otomatik testlerden ve karşılıklı incelemeden geçiyor. Nasıl bağlanacağı: <a href="index.html#claude">Claude ile</a>.</p>
 
 <h2>SahaIQ'yu kim geliştirdi?</h2>
 <p>SahaIQ'nun kurucusu ve geliştiricisi <a href="hakkinda.html">Uğurhan Horasanlı</a>'dır (Ugurhan Horasanli). Yaklaşık beş yıldır B2B saha satışında çalışan, yapay zekâ ve otomasyon sistemleri geliştiren İstanbul merkezli bir geliştiricidir.</p>

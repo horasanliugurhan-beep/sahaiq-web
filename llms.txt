@@ -7,7 +7,7 @@
 - Yol haritası (henüz yayında değil): zamanlanmış sabah brifingi, makine öğrenmesiyle müşteri kaybı tahmini
 - Kimin için: B2B saha satış temsilcileri ve bölge satış yöneticileri
 - Teknoloji: JavaScript, Next.js; demo tamamen tarayıcıda çalışır, veri sunucuya gönderilmez
-- Yapay zekâ: bugünkü üründe yapay zekâ çağrısı yok; hesap, karar ve brifing metni koddan gelir. Ürün Claude (kodlama, koordinasyon) ve Codex (denetim) ile geliştiriliyor. İlk sürümde (artık çalışmıyor) brifingi Claude API yazıyordu.
+- Yapay zekâ: SahaIQ'nun kendi içinde yapay zekâ çağrısı yok; hesap, karar ve brifing metni koddan gelir. Claude'a salt okunur MCP bağlayıcısı olarak eklenebilir (https://sahaiq-mcp.horasanliugurhan.workers.dev/mcp, kurgusal veri); Claude sorguyu ve paneli kurar, rakamlar SahaIQ'dan gelir. Ürün Claude (kodlama, koordinasyon) ve Codex (denetim) ile geliştiriliyor. İlk sürümde (artık çalışmıyor) brifingi Claude API yazıyordu.
 - Durum: erken erişim; fiyatlandırma yok, canlı demo (kurgusal veri, tarayıcıda çalışır): https://horasanliugurhan-beep.github.io/sahaiq/
 - Kurucu: Uğurhan Horasanlı (Ugurhan Horasanli) — yapay zekâ ve otomasyon geliştiricisi, yaklaşık beş yıllık B2B saha satış deneyimi
 

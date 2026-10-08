@@ -6,41 +6,40 @@
 <title>SahaIQ · Saha satış ekipleri için satış analitiği</title>
 <meta name="description" content="SahaIQ; saha satış ekipleri için RFM segmentasyonu, düşüş ve sessizlik sinyalleri ve gerekçeli arama listesi sunan satış analitiği aracıdır. Kurgusal veriyle ya da kendi Excel/CSV dosyanızla tarayıcıda deneyebilirsiniz.">
 <link rel="canonical" href="https://sahaiq.app/">
-<meta name="theme-color" content="#f4f6f5" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121a21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#262b31">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","@id":"https://sahaiq.app/hakkinda.html#kisi","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"email":"info@sahaiq.app","sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"],"@id":"https://sahaiq.app/#kurulus"},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için RFM segmentasyonu ve gerekçeli arama listesi sunan satış analitiği aracı.","creator":{"@id":"https://sahaiq.app/hakkinda.html#kisi"},"publisher":{"@id":"https://sahaiq.app/#kurulus"}}]}</script>
 </head>
 <body>
-<header class="wrap top">
-  <a class="mark" href="index.html">Saha<span>IQ</span></a>
+<header class="road road-top"><div class="wrap top">
+  <a class="mark" href="index.html" aria-label="SahaIQ ana sayfa">Saha<span>IQ</span></a>
   <nav aria-label="Site">
     <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a>
     <a class="wide" href="#nasil">Nasıl çalışır</a>
+    <a class="wide" href="#claude">Claude ile</a>
     <a href="sss.html">SSS</a>
     <a href="hakkinda.html">Hakkında</a>
-    <a class="wide" href="https://github.com/horasanliugurhan-beep/sahaiq">GitHub</a>
   </nav>
-</header>
+</div></header>
 
 <main>
-<section class="wrap hero">
-  <div>
+<section class="road road-hero"><div class="wrap hero">
+  <div class="hero-copy">
     <h1>Sabah ilk kimi arayacağınızı bilerek güne başlayın.</h1>
-    <p class="lead">SahaIQ satış dökümünüzü okur, sessizleşen ve alımı düşen müşterileri bulur, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
+    <p class="lead">SahaIQ satış dökümünüzü okur, sessizleşen ve alımı düşen bayileri bulur, her biri için gerekçesiyle bir sonraki adımı önerir.</p>
     <div class="actions">
       <a class="btn" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu açın</a>
-      <a class="textlink" href="https://github.com/horasanliugurhan-beep/sahaiq">Kaynak kodu inceleyin</a>
+      <a class="textlink" href="#claude">Claude'a bağlayın</a>
     </div>
     <p class="small">Demo 40 kurgusal bayiyle açılır. Kendi Excel ya da CSV dosyanızı da yükleyebilirsiniz; dosya tarayıcınızdan dışarı çıkmaz.</p>
   </div>
 
-  <div class="queue-panel">
-    <div class="queue-head">
-      <h2 id="queue-title">Bugünün listesinden altı örnek</h2>
+  <div class="route">
+    <div class="route-head">
+      <h2 id="queue-title">Bugünün rotasından altı durak</h2>
       <button type="button" id="replay" hidden>Yeniden sırala</button>
     </div>
     <ol class="queue" id="queue" aria-labelledby="queue-title">
@@ -51,9 +50,9 @@
       <li data-alpha="2"><span class="rk">#19</span><div><span class="who">Kurgu Defne Jant &amp; Lastik</span><span class="why">Yeni müşteri: ilk alımlar yapıldı, ilişki henüz oturmadı</span></div><span class="when p2">Bu hafta</span></li>
       <li data-alpha="1"><span class="rk">#24</span><div><span class="who">Kurgu Çam Jant &amp; Lastik</span><span class="why">Uzun süredir pasif (172 gün)</span></div><span class="when p1">Fırsat olunca</span></li>
     </ol>
-    <div class="queue-foot"><p>Kurgusal demo verisinden gerçek hesap çıktısı. #numara, müşterinin 29 kişilik arama listesindeki sırasıdır; aradaki müşteriler burada gösterilmiyor.</p></div>
+    <p class="route-foot">Kurgusal demo verisinden gerçek hesap çıktısı. #numara, bayinin 29 kişilik arama listesindeki sırasıdır; aradaki duraklar burada gösterilmiyor.</p>
   </div>
-</section>
+</div></section>
 
 <section class="band" id="kisa-cevap">
   <div class="wrap">
@@ -75,32 +74,69 @@
   </div>
 </section>
 
-<section class="band" id="ozellikler">
-  <div class="wrap">
-    <h2>Brifingdeki her rakam veriden gelir</h2>
-    <div class="split">
-      <div>
-        <p class="intro">Kimin aranacağına ve rakamlara kod karar verir. Metin şablonla kurulur, gönderilmeden önce içindeki her sayı veriyle karşılaştırılır.</p>
-        <ul class="plain">
-          <li><strong>Fiyat, stok ya da kampanya vaadi yok.</strong> Satış dökümünde bu bilgi yoksa brifingde de olmaz.</li>
-          <li><strong>Bayiye rakamla gidilmez.</strong> Önerilen açılış cümleleri saygılıdır; "ciron düştü" demez.</li>
-          <li><strong>Veri tarihi hep görünür.</strong> Eski bir döküm yüklenirse bugünün durumu gibi sunulmaz.</li>
-        </ul>
+<section class="band claude" id="claude">
+  <div class="wrap split">
+    <div>
+      <h2>Claude'a sorun, rakamlar SahaIQ'dan gelsin</h2>
+      <p class="intro">SahaIQ, Claude'a salt okunur bir bağlayıcı olarak eklenebilir. "Son 90 günde satışı en çok düşen bayileri göster" dediğinizde Claude sorguyu ve paneli kurar; tutarlar, yüzdeler ve sıralama SahaIQ'nun test edilmiş hesabından gelir, Claude rakam üretmez.</p>
+      <ol class="connect">
+        <li>Claude'da <em>Özelleştir → Bağdaştırıcılar → Ekle → Özel bağdaştırıcı</em>.</li>
+        <li>Adres olarak şunu girin:
+          <code class="url">https://sahaiq-mcp.horasanliugurhan.workers.dev/mcp</code></li>
+        <li>Yeni bir sohbette panel isteyin.</li>
+      </ol>
+      <p class="small">Bağlayıcı şu an yalnızca kurgusal demo verisi verir; oturum açma gerektirmez ve hiçbir veriyi değiştiremez.</p>
+    </div>
+    <figure class="panel" aria-label="Claude'un SahaIQ verisiyle kurduğu panelin sadeleştirilmiş kopyası">
+      <div class="panel-head">
+        <span class="panel-title">SahaIQ düşüş paneli</span>
+        <span class="panel-src">Veri tarihi 27 Eylül 2026, kurgusal demo verisi</span>
       </div>
-      <div>
+      <dl class="kpis">
+        <div><dt>Müşteri</dt><dd>40</dd></div>
+        <div><dt>Toplam ciro</dt><dd>₺53,8 Mn</dd></div>
+        <div><dt>Risk altında</dt><dd>%38,8</dd></div>
+        <div><dt>Arama listesi</dt><dd>29</dd></div>
+      </dl>
+      <p class="panel-sub">Son 90 günde en çok düşen bayiler</p>
+      <ul class="bars">
+        <li style="--v:100"><span>Kurgu Çam Jant &amp; Lastik</span><b>-%100</b></li>
+        <li style="--v:100"><span>Kurgu Fener Lastik Market</span><b>-%100</b></li>
+        <li style="--v:100"><span>Kurgu Kartal Oto Servis</span><b>-%100</b></li>
+        <li style="--v:95"><span>Kurgu Martı Lastik Market</span><b>-%95</b></li>
+        <li style="--v:95"><span>Kurgu Ege Lastik Merkezi</span><b>-%95</b></li>
+        <li style="--v:94"><span>Kurgu Kumru Oto Lastik</span><b>-%94</b></li>
+      </ul>
+      <figcaption>Claude Panelleri'nde SahaIQ verisiyle kurulan panelin sadeleştirilmiş kopyası. Rakamlar bağlayıcının döndürdüğü değerlerdir.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band asphalt" id="ozellikler">
+  <div class="wrap split">
+    <div>
+      <h2>Brifingdeki her rakam veriden gelir</h2>
+      <p class="intro">Kimin aranacağına ve rakamlara kod karar verir. Metin şablonla kurulur, gönderilmeden önce satır satır üretilen brifingle karşılaştırılır.</p>
+      <ul class="plain">
+        <li><strong>Fiyat, stok ya da kampanya vaadi yok.</strong> Satış dökümünde bu bilgi yoksa brifingde de olmaz.</li>
+        <li><strong>Bayiye rakamla gidilmez.</strong> Önerilen açılış cümleleri saygılıdır; "ciron düştü" demez.</li>
+        <li><strong>Veri tarihi hep görünür.</strong> Eski bir döküm yüklenirse bugünün durumu gibi sunulmaz.</li>
+      </ul>
+    </div>
+    <div>
 <pre class="brief" aria-label="Demo verisinden brifing örneği">🗓 SAHA BRİFİNGİ · veri tarihi <mark>27</mark> Eylül <mark>2026</mark>
 
-🔴 BUGÜN ARA (<mark>5</mark> / toplam <mark>17</mark>)
-1) Bulut Jant &amp; Lastik · Risk altında
+🔴 BUGÜN ARA · yüksek öncelik (ilk <mark>5</mark> / <mark>17</mark>)
+1) Kurgu Bulut Jant &amp; Lastik · Risk altında
    • Son alım <mark>54</mark> gün önce (<mark>4</mark> Ağustos <mark>2026</mark>)
    • Son <mark>90</mark> gün <mark>₺53.973</mark>, önceki <mark>90</mark> gün <mark>₺442.265</mark> (<mark>-%88</mark>)
    • En çok aldığı ürün: Kış 225/45 R17
+   • Neden: Eskiden düzenli alan müşteri <mark>54</mark> gündür sessiz
    → Kaybedilen talebi araştırın, geri kazanım görüşmesi planlayın.
    💬 "Merhaba, uzun zamandır konuşamadık, her şey yolunda mı? Bu hafta uğrayıp önümüzdeki dönemin ihtiyaçlarını birlikte planlayalım mı?"</pre>
-        <div class="guard">
-          <span class="ok">✓ İşaretli rakamların hepsi hesaplanan veride var.</span>
-          <span class="no">✗ <s>"R21 takımda ₺22.000 özel fiyat"</s> veride yok; böyle bir cümle içeren metin gönderilmez.</span>
-        </div>
+      <div class="guard">
+        <span class="ok">✓ İşaretli rakamların hepsi hesaplanan veride var.</span>
+        <span class="no">✗ <s>"R21 takımda ₺22.000 özel fiyat"</s> veride yok; böyle bir cümle içeren metin kopyalanamaz.</span>
       </div>
     </div>
   </div>
@@ -115,8 +151,8 @@
         <ul>
           <li>Excel, CSV ve yapıştırılan tablodan analiz</li>
           <li>RFM segmentleri ve 90 günlük düşüş sinyali</li>
-          <li>Gerekçeli arama listesi ve brifing önizlemesi</li>
-          <li>Tamamen tarayıcıda; veri sunucuya gitmez</li>
+          <li>Gerekçeli arama listesi ve doğrulanmış brifing</li>
+          <li>Claude bağlayıcısı (kurgusal veriyle)</li>
         </ul>
       </div>
       <div>
@@ -132,7 +168,7 @@
         <ul>
           <li>Her sabah kendiliğinden gelen brifing</li>
           <li>Makine öğrenmesiyle müşteri kaybı tahmini</li>
-          <li>İş zekâsı sistemlerine doğrudan bağlantı</li>
+          <li>Şirket verisiyle, onaylı pilot kullanım</li>
         </ul>
       </div>
     </div>
