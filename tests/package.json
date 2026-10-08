@@ -1,0 +1,13 @@
+{
+  "name": "sahaiq-web-tests",
+  "private": true,
+  "type": "module",
+  "description": "Browser smoke tests for sahaiq.app. Not part of the published site.",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1"
+  }
+}
