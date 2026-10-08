@@ -7,12 +7,12 @@
   --surface: #ffffff;
   --ink: #17212b;
   --ink-2: #4d5967;
-  --ink-3: #7a8592;
+  --ink-3: #636e7a;
   --rule: #d8dee3;
   --petrol: #0d5c63;
   --petrol-ink: #ffffff;
   --high: #b5402c;
-  --mid: #a8701a;
+  --mid: #865810;
   --low: #5d6b78;
   --mark: rgba(13, 92, 99, 0.12);
   --measure: 34rem;
@@ -91,6 +91,7 @@ p { margin: 0 0 1em; }
 .queue-panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 0.9rem; padding: 1.1rem 1.1rem 0.6rem; }
 .queue-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.15rem 0.35rem 0.85rem; border-bottom: 1px solid var(--rule); }
 .queue-head h2 { font-size: 1.02rem; letter-spacing: 0; }
+.queue-head button[aria-disabled="true"] { opacity: 0.55; cursor: default; }
 .queue-head button {
   font: inherit; font-size: 0.86rem; color: var(--petrol); background: none; border: 0; padding: 0.2rem 0; cursor: pointer;
   text-decoration: underline; text-underline-offset: 0.18em;

@@ -11,10 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=2">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"]},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için RFM segmentasyonu ve gerekçeli arama listesi sunan satış analitiği aracı.","creator":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}]}
-</script>
+<link rel="stylesheet" href="assets/site.css?v=3">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SahaIQ","url":"https://sahaiq.app/","inLanguage":"tr"},{"@type":"Organization","name":"SahaIQ","url":"https://sahaiq.app/","founder":{"@type":"Person","@id":"https://sahaiq.app/hakkinda.html#kisi","name":"Uğurhan Horasanlı","alternateName":"Ugurhan Horasanli","url":"https://sahaiq.app/hakkinda.html"},"sameAs":["https://github.com/horasanliugurhan-beep/sahaiq"],"@id":"https://sahaiq.app/#kurulus"},{"@type":"SoftwareApplication","name":"SahaIQ","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sahaiq.app/","description":"Saha satış ekipleri için RFM segmentasyonu ve gerekçeli arama listesi sunan satış analitiği aracı.","creator":{"@id":"https://sahaiq.app/hakkinda.html#kisi"},"publisher":{"@id":"https://sahaiq.app/#kurulus"}}]}</script>
 </head>
 <body>
 <header class="wrap top">
@@ -184,6 +182,8 @@
   function place(order) { order.forEach(function (li) { list.appendChild(li); }); }
   function alpha() { return final.slice().sort(function (a, b) { return a.dataset.alpha - b.dataset.alpha; }); }
 
+  var running = false;
+
   // FLIP: measure, reorder, invert, play.
   function sortToPriority() {
     var first = new Map(final.map(function (li) { return [li, li.getBoundingClientRect().top]; }));
@@ -195,16 +195,27 @@
     });
     list.offsetHeight;
     final.forEach(function (li) { li.style.transition = ""; li.style.transform = ""; });
-    setTimeout(function () { list.classList.remove("unsorted"); if (replay) replay.hidden = false; }, 650);
+    setTimeout(function () {
+      list.classList.remove("unsorted");
+      running = false;
+      if (replay) { replay.hidden = false; replay.removeAttribute("aria-disabled"); }
+    }, 650);
   }
 
   function run() {
+    running = true;
     list.classList.add("unsorted");
     place(alpha());
     setTimeout(sortToPriority, 900);
   }
   run();
-  if (replay) replay.addEventListener("click", function () { replay.hidden = true; run(); });
+  // The button stays in place and keeps keyboard focus while the list re-sorts;
+  // presses during the animation are ignored instead of hiding the button.
+  if (replay) replay.addEventListener("click", function () {
+    if (running) return;
+    replay.setAttribute("aria-disabled", "true");
+    run();
+  });
 })();
 </script>
 </body>
