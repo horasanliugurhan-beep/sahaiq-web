@@ -50,8 +50,7 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--fog);
@@ -62,7 +61,9 @@ body {
 }
 a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 3px solid var(--lane); outline-offset: 3px; border-radius: 2px; }
+/* Focus: ink ring on paper (yellow is ~1.5:1 there), yellow ring on asphalt. */
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+.road :focus-visible, .asphalt :focus-visible, .foot :focus-visible { outline-color: var(--lane); }
 img { max-width: 100%; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
