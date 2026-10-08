@@ -3,8 +3,8 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const PAGES = ["/", "/sss.html", "/hakkinda.html", "/sahaiq-nasil-kurdum.html"];
-const PRIORITY = ["1", "2", "8", "18", "19", "24"]; // final order in the hero queue
+const PAGES = ["/", "/sss.html", "/hakkinda.html", "/sahaiq-nasil-kurdum.html", "/gizlilik.html"];
+const PRIORITY = ["#1", "#2", "#8", "#18", "#19", "#24"]; // final order in the hero queue
 
 // External requests (Google Fonts) are answered empty so tests don't depend on
 // the network; any other failure or console error fails the test.
@@ -81,3 +81,26 @@ test("with reduced motion the queue is static and in priority order", async ({ b
   await expect(page.locator("#replay")).toBeHidden();
   await context.close();
 });
+
+test("every page offers the contact address and the privacy page", async ({ page }) => {
+  for (const path of PAGES) {
+    await page.goto(path);
+    await expect(page.locator('footer a[href="mailto:info@sahaiq.app"]'), path).toBeVisible();
+    await expect(page.locator('footer a[href="gizlilik.html"]'), path).toBeVisible();
+  }
+});
+
+test("hero names are visibly fictional", async ({ page }) => {
+  await page.goto("/");
+  for (const n of await page.locator("#queue .who").allTextContents()) expect(n).toMatch(/^Kurgu /);
+});
+
+test("site does not claim the current product calls Claude API", async ({ page }) => {
+  for (const path of PAGES) {
+    await page.goto(path);
+    const text = await page.locator("main").innerText();
+    expect(text, path).not.toMatch(/Claude API ile üretil/);
+    expect(text, path).not.toMatch(/satışta değil/);
+  }
+});
+
