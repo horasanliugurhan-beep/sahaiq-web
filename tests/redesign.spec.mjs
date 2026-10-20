@@ -64,7 +64,7 @@ test('queue, KPIs, decline examples and briefing remain the existing demo output
 test('page links, stylesheet version and inner-page section anchors resolve', async ({ page, request }) => {
   for (const path of PAGES) {
     await page.goto(path);
-    await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute('href', 'assets/site.css?v=5');
+    await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute('href', 'assets/site.css?v=6');
     const targets = await page.locator('a[href]').evaluateAll(links => links.map(link => new URL(link.href)).filter(url => url.origin === location.origin && url.hash).map(url => ({ pathname: url.pathname, hash: url.hash })));
     for (const { pathname, hash } of targets) {
       // The existing link-resolution tests check the document. Verify fragments too.
