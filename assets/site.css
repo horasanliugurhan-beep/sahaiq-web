@@ -43,8 +43,8 @@ body {
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--lane); }
-:focus-visible { outline: 3px solid var(--lane); outline-offset: 3px; border-radius: 2px; }
-.on-dark :focus-visible, .site-foot :focus-visible { outline-color: var(--lane); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+.on-dark :focus-visible, .site-foot :focus-visible, .window :focus-visible { outline-color: var(--lane); }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.015em; line-height: 1.08; }
 h1, h2 { font-stretch: 115%; }
@@ -57,7 +57,7 @@ p { margin: 0; }
 
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10; background: var(--ink); color: var(--white); padding: 10px 14px; border-radius: var(--r-s); text-decoration: none; font-weight: 600; }
 .skip-link:focus { top: 12px; }
-main:focus { outline: none; }
+main:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
 
 /* ── Header ─────────────────────────────────────────────── */
 .site-head { border-bottom: 1px solid var(--fog); background: var(--paper); }
