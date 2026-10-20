@@ -8,30 +8,36 @@
 <meta name="description" content="SahaIQ'nun artık çalışmayan ilk sürümü nasıl kuruldu: RFM analizi, müşteri kaybı tahmini, Claude API ve n8n ile sabah brifingi; ve neden bugünkü kural tabanlı sürüme geçildi.">
 <meta name="author" content="Uğurhan Horasanlı">
 <link rel="canonical" href="https://sahaiq.app/sahaiq-nasil-kurdum.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Archivo.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=5">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"SahaIQ'nun ilk sürümü: Claude API ve n8n ile sabah brifingi (artık çalışmıyor)","datePublished":"2026-09-24","dateModified":"2026-10-20","inLanguage":"tr","url":"https://sahaiq.app/sahaiq-nasil-kurdum.html","author":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"},"publisher":{"@type":"Person","name":"Uğurhan Horasanlı","url":"https://sahaiq.app/hakkinda.html"}}
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">İçeriğe geç</a>
 <header class="road road-top"><div class="wrap top">
   <a class="mark" href="index.html" aria-label="SahaIQ ana sayfa">Saha<span>IQ</span></a>
   <nav aria-label="Site">
-    <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a>
+    <a class="nav-demo" href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
     <a class="wide" href="index.html#nasil">Nasıl çalışır</a>
     <a class="wide" href="index.html#claude">Claude ile</a>
     <a href="sss.html">SSS</a>
     <a href="hakkinda.html">Hakkında</a>
   </nav>
 </div></header>
-<main class="wrap"><div class="page">
+<main class="inner-main" id="main" tabindex="-1"><div class="wrap">
+  <header class="page-heading">
+    <p class="breadcrumb"><a href="index.html">Ana sayfa</a><span aria-hidden="true">/</span>Proje günlüğü</p>
+    <p class="eyebrow">ARŞİV / İLK SÜRÜM</p>
+    <h1>SahaIQ'nun ilk sürümü: Claude API ve n8n ile sabah brifingi</h1>
+    <p class="meta">Yazar: <a href="hakkinda.html">Uğurhan Horasanlı</a> · 24 Eylül 2026</p>
+  </header>
+  <div class="inner-layout">
+    <nav class="page-nav" aria-label="Bu sayfada"><p class="eyebrow">BU SAYFADA</p><ul><li><a href="#bolum-1">İlk sürüm nasıl çalışıyordu?</a></li><li><a href="#bolum-2">Yolda öğrendiklerim</a></li><li><a href="#bolum-3">Sırada ne var?</a></li></ul></nav>
+    <div class="page"><article>
 
-<article>
-<h1>SahaIQ'nun ilk sürümü: Claude API ve n8n ile sabah brifingi</h1>
-<p class="meta">Yazar: <a href="hakkinda.html">Uğurhan Horasanlı</a> · 24 Eylül 2026</p>
 
 <p class="meta"><strong>Not:</strong> Bu yazı SahaIQ'nun <strong>artık çalışmayan ilk sürümünü</strong> anlatır. Bugünkü sürümde Claude API çağrısı ve otomatik sabah gönderimi yoktur. O sürümdeki n8n akışı kapatıldı; brifingin rakam ve önerileri yeterince güvenilir değildi. Güncel sürümde kimin aranacağına ve rakamlara açıklanabilir kurallar karar veriyor. <a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demoyu deneyin</a>.</p>
 
@@ -39,7 +45,7 @@
 
 <p>Elinizde yüzü aşkın müşteri varsa bu sorunun cevabı genelde hafızaya, alışkanlığa ya da o sabah telefonu ilk kimin açtığına kalıyor. Sessizce sipariş vermeyi bırakan müşteriyi fark ettiğinizde ise çoğu zaman iş işten geçmiş oluyor. SahaIQ'yu bu soruya her sabah hazır bir cevap bulmak için kurdum.</p>
 
-<h2>İlk sürüm nasıl çalışıyordu?</h2>
+<h2 id="bolum-1">İlk sürüm nasıl çalışıyordu?</h2>
 <p>Sistem dört adımlı basit bir zincirdi:</p>
 <ol>
 <li><strong>Veri:</strong> Müşteri bazında sipariş geçmişi; ne zaman, ne sıklıkla ve ne tutarda sipariş verildiği.</li>
@@ -53,7 +59,7 @@
 <li><strong>Teslim (n8n + Telegram):</strong> Bütün akış n8n üzerinde her sabah otomatik çalışıyor, brifing telefona mesaj olarak düşüyordu.</li>
 </ol>
 
-<h2>Yolda öğrendiklerim</h2>
+<h2 id="bolum-2">Yolda öğrendiklerim</h2>
 <ul>
 <li><strong>İşin büyük kısmı veri temizliği.</strong> Model kurmak birkaç gün sürdü; verinin tutarlı hale gelmesi (aynı müşterinin farklı yazılışları, eksik tarihler, iadeler) çok daha uzun.</li>
 <li><strong>Brifing kısa olmalı.</strong> İlk sürümler fazla detaylıydı ve okunmadı. Mesajı üç öneriye indirince kullanılmaya başladı.</li>
@@ -61,14 +67,15 @@
 <li><strong>Model karar vermiyor, hatırlatıyor.</strong> Sahadaki insanın bildiği şeyi model bilmiyor. Sistemin işi, gözden kaçanı sabah önüne koymak.</li>
 </ul>
 
-<h2>Sırada ne var?</h2>
+<h2 id="bolum-3">Sırada ne var?</h2>
 <p>Güncel sürüm açıklanabilir kurallarla çalışıyor ve <a href="https://horasanliugurhan-beep.github.io/sahaiq/">canlı demo</a> olarak herkese açık. Sabah brifingi şablonla, yapay zekâ kullanılmadan üretiliyor; her rakamı bir bekçi doğruluyor. Kopyalanabiliyor ya da WhatsApp'ta açılabiliyor, otomatik gönderim yok. Claude'un yalnızca metni sadeleştirdiği, rakamlara dokunmadığı bir sonraki adım ve kayıp tahmini yol haritasında. SahaIQ kişisel ve ticari olmayan bir proje; satışı ve geliri yok.</p>
 </article>
-
+    </div>
+  </div>
 </div></main>
 <footer class="foot">
   <div class="wrap">
-    <span>SahaIQ, kişisel ve ticari olmayan bir projedir. Geliştiren: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli)</span>
+    <div class="foot-identity"><a class="mark" href="index.html" aria-label="SahaIQ ana sayfa">Saha<span>IQ</span></a><p>SahaIQ, kişisel ve ticari olmayan bir projedir.<br>Geliştiren: <a href="hakkinda.html">Uğurhan Horasanlı</a> (Ugurhan Horasanli)</p></div>
     <nav aria-label="Alt bağlantılar"><a href="mailto:info@sahaiq.app">info@sahaiq.app</a><a href="sss.html">SSS</a><a href="gizlilik.html">Gizlilik</a><a href="https://github.com/horasanliugurhan-beep">GitHub</a><a href="https://horasanliugurhan-beep.github.io/sahaiq/">Canlı demo</a></nav>
   </div>
 </footer>

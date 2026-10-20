@@ -6,7 +6,7 @@ import AxeBuilder from "@axe-core/playwright";
 const PAGES = ["/", "/sss.html", "/hakkinda.html", "/sahaiq-nasil-kurdum.html", "/gizlilik.html"];
 const PRIORITY = ["#1", "#2", "#8", "#18", "#19", "#24"]; // final order in the hero queue
 
-// External requests (Google Fonts) are answered empty so tests don't depend on
+// External requests are answered empty so tests don't depend on
 // the network; any other failure or console error fails the test.
 test.beforeEach(async ({ page }, info) => {
   const errors = [];
@@ -43,12 +43,11 @@ for (const path of PAGES) {
     expect(overflow).toBeLessThanOrEqual(0);
   });
 
-  test(`${path} has no critical or serious axe violations`, async ({ page }) => {
+  test(`${path} has no axe violations`, async ({ page }) => {
     await page.goto(path);
     if (path === "/") await expect(page.locator("#replay")).toBeVisible(); // animation finished
     const { violations } = await new AxeBuilder({ page }).analyze();
-    const blocking = violations.filter((v) => ["critical", "serious"].includes(v.impact));
-    expect(blocking.map((v) => `${v.impact}: ${v.id} (${v.nodes.length}) ${v.nodes[0]?.target}`)).toEqual([]);
+    expect(violations.map((v) => `${v.impact}: ${v.id} (${v.nodes.length}) ${v.nodes[0]?.target}`)).toEqual([]);
   });
 }
 

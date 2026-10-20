@@ -1,0 +1,85 @@
+{
+  "queue": [
+    {
+      "rk": "#1",
+      "who": "Kurgu Bulut Jant & Lastik",
+      "why": "Eskiden düzenli alan müşteri 54 gündür sessiz",
+      "when": "Bugün"
+    },
+    {
+      "rk": "#2",
+      "who": "Kurgu Ufuk Oto Lastik",
+      "why": "Eskiden düzenli alan müşteri 53 gündür sessiz",
+      "when": "Bugün"
+    },
+    {
+      "rk": "#8",
+      "who": "Kurgu Ege Lastik Merkezi",
+      "why": "Son 90 günde net satış önceki 90 güne göre %95 düştü (iadeler dahil)",
+      "when": "Bugün"
+    },
+    {
+      "rk": "#18",
+      "who": "Kurgu İnci Jant & Lastik",
+      "why": "Sadık müşteri 31 gündür alım yapmadı (hedef: 30 gün)",
+      "when": "Bu hafta"
+    },
+    {
+      "rk": "#19",
+      "who": "Kurgu Defne Jant & Lastik",
+      "why": "Yeni müşteri: ilk alımlar yapıldı, ilişki henüz oturmadı",
+      "when": "Bu hafta"
+    },
+    {
+      "rk": "#24",
+      "who": "Kurgu Çam Jant & Lastik",
+      "why": "Uzun süredir pasif (172 gün)",
+      "when": "Fırsat olunca"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Müşteri",
+      "value": "40"
+    },
+    {
+      "label": "Toplam ciro",
+      "value": "₺53,8 Mn"
+    },
+    {
+      "label": "Risk altında",
+      "value": "%38,8"
+    },
+    {
+      "label": "Arama listesi",
+      "value": "29"
+    }
+  ],
+  "bars": [
+    {
+      "name": "Kurgu Çam Jant & Lastik",
+      "value": "-%100"
+    },
+    {
+      "name": "Kurgu Fener Lastik Market",
+      "value": "-%100"
+    },
+    {
+      "name": "Kurgu Kartal Oto Servis",
+      "value": "-%100"
+    },
+    {
+      "name": "Kurgu Martı Lastik Market",
+      "value": "-%95"
+    },
+    {
+      "name": "Kurgu Ege Lastik Merkezi",
+      "value": "-%95"
+    },
+    {
+      "name": "Kurgu Kumru Oto Lastik",
+      "value": "-%94"
+    }
+  ],
+  "briefing": "🗓 SAHA BRİFİNGİ · veri tarihi 27 Eylül 2026\n\n🔴 BUGÜN ARA · yüksek öncelik (ilk 5 / 17)\n1) Kurgu Bulut Jant & Lastik · Risk altında\n   • Son alım 54 gün önce (4 Ağustos 2026)\n   • Son 90 gün ₺53.973, önceki 90 gün ₺442.265 (-%88)\n   • En çok aldığı ürün: Kış 225/45 R17\n   • Neden: Eskiden düzenli alan müşteri 54 gündür sessiz\n   → Kaybedilen talebi araştırın, geri kazanım görüşmesi planlayın.\n   💬 \"Merhaba, uzun zamandır konuşamadık, her şey yolunda mı? Bu hafta uğrayıp önümüzdeki dönemin ihtiyaçlarını birlikte planlayalım mı?\""
+}
