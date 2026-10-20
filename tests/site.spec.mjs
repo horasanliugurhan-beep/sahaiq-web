@@ -112,7 +112,10 @@ test("every page says SahaIQ is a personal, non-commercial project", async ({ pa
     const text = await page.locator("body").innerText();
     expect(text, path).not.toMatch(/erken erişim|pilot (kullanım|görüşme)|[Kk]urucu/);
   }
-  await page.goto("/");
-  const ld = await page.locator('script[type="application/ld+json"]').first().textContent();
-  expect(ld).not.toMatch(/"Organization"|"founder"|"offers"/);
+  for (const path of PAGES) {
+    await page.goto(path);
+    for (const ld of await page.locator('script[type="application/ld+json"]').allTextContents()) {
+      expect(ld, path).not.toMatch(/"Organization"|"founder"|"offers"/);
+    }
+  }
 });
