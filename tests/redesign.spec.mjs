@@ -35,7 +35,7 @@ for (const path of PAGES) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
     const { violations } = await new AxeBuilder({ page }).analyze();
     expect(violations.map(v => `${v.id}: ${v.nodes.map(node => node.target).join(', ')}`)).toEqual([]);
-    await expect(page.locator('footer')).toContainText('kişisel ve ticari olmayan bir projedir');
+    await expect(page.locator('footer')).toContainText('ticari bir ürün olarak geliştiriliyor; henüz ücretli kullanıcısı yoktur');
     expect(await page.locator('body').innerText()).not.toMatch(/şirketimiz|ekibimiz|müşterilerimiz|fiyat paketleri|müşteri logoları/i);
     // A keyboard user can reach the page content before the navigation links.
     await page.keyboard.press('Tab');
