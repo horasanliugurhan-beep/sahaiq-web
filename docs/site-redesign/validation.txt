@@ -1,0 +1,57 @@
+Node 24.19.0 / npm 11.9.0 / Chromium 154
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium
+npm_config_cache=/workspace/.npm-cache
+
+$ cd tests && npm ci
+added 6 packages in 435ms
+[exit 0]
+
+$ npm test
+> test
+> playwright test
+
+[WebServer] (node:22954) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 29 tests using 2 workers
+
+(node:22977) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22977) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › site.spec.mjs:26:3 › / loads, links resolve, JSON-LD parses (610ms)
+  ✓   3 [chromium] › site.spec.mjs:43:3 › / has no horizontal overflow at 390 px (303ms)
+  ✓   1 [chromium] › redesign.spec.mjs:22:3 › / at 390px uses local Archivo, makes no external requests and passes axe (1.9s)
+  ✓   4 [chromium] › site.spec.mjs:54:3 › / has no axe violations (1.6s)
+  ✓   6 [chromium] › site.spec.mjs:26:3 › /sss.html loads, links resolve, JSON-LD parses (378ms)
+  ✓   5 [chromium] › redesign.spec.mjs:22:3 › /sss.html at 390px uses local Archivo, makes no external requests and passes axe (1.3s)
+  ✓   7 [chromium] › site.spec.mjs:43:3 › /sss.html has no horizontal overflow at 390 px (281ms)
+  ✓   8 [chromium] › redesign.spec.mjs:22:3 › /hakkinda.html at 390px uses local Archivo, makes no external requests and passes axe (1.1s)
+  ✓   9 [chromium] › site.spec.mjs:54:3 › /sss.html has no axe violations (983ms)
+  ✓  11 [chromium] › site.spec.mjs:26:3 › /hakkinda.html loads, links resolve, JSON-LD parses (407ms)
+  ✓  12 [chromium] › site.spec.mjs:43:3 › /hakkinda.html has no horizontal overflow at 390 px (295ms)
+  ✓  10 [chromium] › redesign.spec.mjs:22:3 › /gizlilik.html at 390px uses local Archivo, makes no external requests and passes axe (1.1s)
+  ✓  13 [chromium] › site.spec.mjs:54:3 › /hakkinda.html has no axe violations (769ms)
+  ✓  15 [chromium] › site.spec.mjs:26:3 › /sahaiq-nasil-kurdum.html loads, links resolve, JSON-LD parses (270ms)
+  ✓  16 [chromium] › site.spec.mjs:43:3 › /sahaiq-nasil-kurdum.html has no horizontal overflow at 390 px (225ms)
+  ✓  14 [chromium] › redesign.spec.mjs:22:3 › /sahaiq-nasil-kurdum.html at 390px uses local Archivo, makes no external requests and passes axe (1.0s)
+  ✓  18 [chromium] › redesign.spec.mjs:63:1 › queue, KPIs, decline examples and briefing remain the existing demo output (482ms)
+  ✓  17 [chromium] › site.spec.mjs:54:3 › /sahaiq-nasil-kurdum.html has no axe violations (1.2s)
+  ✓  19 [chromium] › redesign.spec.mjs:89:1 › page links, stylesheet version and inner-page section anchors resolve (874ms)
+  ✓  20 [chromium] › site.spec.mjs:26:3 › /gizlilik.html loads, links resolve, JSON-LD parses (328ms)
+  ✓  21 [chromium] › redesign.spec.mjs:123:1 › Archivo is the same licensed font shipped with the demo and privacy text matches (274ms)
+  ✓  22 [chromium] › site.spec.mjs:43:3 › /gizlilik.html has no horizontal overflow at 390 px (329ms)
+  ✓  23 [chromium] › site.spec.mjs:54:3 › /gizlilik.html has no axe violations (660ms)
+  ✓  24 [chromium] › site.spec.mjs:68:1 › hero queue ends in priority order and replay works from the keyboard (2.1s)
+  ✓  25 [chromium] › site.spec.mjs:88:1 › with reduced motion the queue is static and in priority order (418ms)
+  ✓  26 [chromium] › site.spec.mjs:104:1 › every page offers the contact address and the privacy page (496ms)
+  ✓  27 [chromium] › site.spec.mjs:113:1 › hero names are visibly fictional (210ms)
+  ✓  28 [chromium] › site.spec.mjs:119:1 › site does not claim the current product calls Claude API (496ms)
+  ✓  29 [chromium] › site.spec.mjs:129:1 › every page says SahaIQ is a personal, non-commercial project (734ms)
+
+  29 passed (14.8s)
+[exit 0]
