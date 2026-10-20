@@ -104,3 +104,18 @@ test("site does not claim the current product calls Claude API", async ({ page }
   }
 });
 
+
+test("every page says SahaIQ is a personal, non-commercial project", async ({ page }) => {
+  for (const path of PAGES) {
+    await page.goto(path);
+    await expect(page.locator("footer"), path).toContainText("kişisel ve ticari olmayan bir projedir");
+    const text = await page.locator("body").innerText();
+    expect(text, path).not.toMatch(/erken erişim|pilot (kullanım|görüşme)|[Kk]urucu/);
+  }
+  for (const path of PAGES) {
+    await page.goto(path);
+    for (const ld of await page.locator('script[type="application/ld+json"]').allTextContents()) {
+      expect(ld, path).not.toMatch(/"Organization"|"founder"|"offers"/);
+    }
+  }
+});
