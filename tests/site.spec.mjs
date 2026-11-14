@@ -107,7 +107,7 @@ test("site does not claim the current product calls Claude API", async ({ page }
 test("every page states the commercial aim without claiming paying users", async ({ page }) => {
   for (const path of PAGES) {
     await page.goto(path);
-    await expect(page.locator("footer"), path).toContainText("ticari bir ürün olarak geliştiriliyor; henüz ücretli kullanıcısı yoktur");
+    await expect(page.locator("footer"), path).toContainText("saha satış ekipleri için geliştirilen bir satış analitiği ürünüdür");
     const text = await page.locator("body").innerText();
     expect(text, path).not.toMatch(/erken erişim|pilot (kullanım|görüşme)|[Kk]urucu/);
   }
