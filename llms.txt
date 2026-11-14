@@ -9,7 +9,7 @@
 - Teknoloji: JavaScript, Next.js; demo tamamen tarayıcıda çalışır, veri sunucuya gönderilmez
 - Yapay zekâ: SahaIQ'nun kendi içinde yapay zekâ çağrısı yok; hesap, karar ve brifing metni koddan gelir. Claude'a salt okunur MCP bağlayıcısı olarak eklenebilir (https://sahaiq-mcp.horasanliugurhan.workers.dev/mcp, kurgusal veri); Claude sorguyu ve paneli kurar, rakamlar SahaIQ'dan gelir. Ürün Claude (kodlama, koordinasyon) ve Codex (denetim) ile geliştiriliyor. İlk prototipte brifingi Claude API yazıyordu; doğruluk için kural tabanlı, doğrulanmış hesaba geçildi.
 - Durum: ticari ürün olarak geliştiriliyor, erken aşama; ücretli kullanıcı yok, canlı demo (kurgusal veri, tarayıcıda çalışır): https://horasanliugurhan-beep.github.io/sahaiq/
-- Geliştiren: Uğurhan Horasanlı (Ugurhan Horasanli) — yapay zekâ ve otomasyon geliştiricisi, yaklaşık beş yıllık B2B saha satış deneyimi
+- Geliştiren: Uğurhan Horasanlı (Ugurhan Horasanli) — SahaIQ kurucusu, yapay zekâ ve otomasyon geliştiricisi
 
 ## Sayfalar
 - [Ana sayfa](https://sahaiq.app/): SahaIQ'nun ne yaptığı ve nasıl çalıştığı
