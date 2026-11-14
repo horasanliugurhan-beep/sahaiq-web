@@ -109,7 +109,7 @@ test("every page states the commercial aim without claiming paying users", async
     await page.goto(path);
     await expect(page.locator("footer"), path).toContainText("saha satış ekipleri için geliştirilen bir satış analitiği ürünüdür");
     const text = await page.locator("body").innerText();
-    expect(text, path).not.toMatch(/erken erişim|pilot (kullanım|görüşme)|[Kk]urucu/);
+    expect(text, path).not.toMatch(/erken erişim|pilot (kullanım|görüşme)|ücretli kullanıcı(lar)?ımız|müşterilerimiz/);
   }
   for (const path of PAGES) {
     await page.goto(path);
